@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/render.js" charset="utf-8"></script>
+    <script src="js/tools.js" charset="utf-8"></script>
+    <script src="js/setup.js" charset="utf-8"></script>
+    <script src="js/json/data_storage.js" charset="utf-8"></script>
+    <script src="js/json/json_1.12.js" charset="utf-8"></script>
+    <script src="js/json/json_1.14.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <div id='header'>
+      <h1>Minecraft Blueprint editor</h1>
+      <div id='version-changer'>
+        <label for='vers-select'>Version:</label>
+        <select id='vers-select'>
+          <option>1.12</option>
+          <option>1.14</option>
+        </select>
+      </div>
+      <div id="navbar">
+          <a href="javascript:void(0)">Home</a>
+          <a class="active" href="javascript:void(0)">Blueprint Editor</a>
+          <a href="javascript:void(0)">Structure Generator</a>
+          <a href="javascript:void(0)">Comming Soon!!!</a>
+      </div>
+    </div>
+    <!---<div id='content-holder'>-->
+      <div id='right-sidebar'>
+        <div id='block_ul'></div>
+      </div>
+      <div id='main_render'>
+        <canvas id="Graphicsvisulator" width="300" height="300"></canvas>
+        <canvas id="Gridvisulator" width="300" height="300"></canvas>
+      </div>
+    <!--</div>-->
+  </body>
+</html>

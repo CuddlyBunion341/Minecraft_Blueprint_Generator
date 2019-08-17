@@ -1,0 +1,42 @@
+img,canvas {
+  image-rendering: pixelated;
+}
+#header {
+  font-family: sans-serif;
+}
+#navbar {
+  width:100%;
+  border-bottom: 5px solid #000;
+  border-top: 5px solid #000;
+  overflow: hidden;
+}
+#navbar a {
+  padding: 14px 16px;
+  float: left;
+  /*background-color: #ff00ff;*/
+  text-decoration:none;
+  color:black;
+}
+#navbar a:hover {
+  /*background-color: #ff0000;*/
+}
+#navbar a.active {
+  color:blue;
+}
+#right-sidebar {
+  float:right;
+  width:250px;
+  height:calc(100vh - 148px);
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+#version-changer {
+  position: relative;
+  top:-6px;
+}
+#Graphicsvisulator, #Gridvisulator {
+  position: absolute;
+}
+#Graphicsvisulator {
+  z-index: 999;
+}
