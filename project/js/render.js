@@ -46,16 +46,31 @@ function renderCell(cell_index) {
 
     }
   }
+  else {
+    ctx.fillStyle = "#FFFFFF"
+    ctx.fillRect(x * clf + lw,z * clf + lw,clf - lw,clf - lw)
+  }
 }
-function renderLayer(layer) {
-  var width = GridObject.x_size;
-  var height = GridObject.z_size;
+function renderCells(cell_arr) {
+  for (var item in cell_arr) {
+    renderCell(item)
+  }
+}
+function renderCellLayer(layer) {
+  width = GridObject.x_size;
+  height = GridObject.z_size;
   for (var x = 0; x < width; x++) {
     for (var z = 0; z < height; z++) {
       var cell_index = cellCord(x,layer,z)
       renderCell(cell_index)
     }
   }
+}
+function renderLayer(layer,dl) {
+  width = GridObject.x_size;
+  height = GridObject.z_size;
+  renderGrid(width,height,dl)
+  renderCellLayer(layer)
 }
 function renderGrid(width,height,dl) {
   var c = document.getElementById('Gridvisulator')

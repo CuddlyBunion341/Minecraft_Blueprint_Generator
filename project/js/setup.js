@@ -32,11 +32,16 @@ function setup() {
   GridObject.Cells["c2x0x1"] = {block:"1"}
   GridObject.Cells["c2x0x2"] = {block:"1:1"}
   GridObject.Cells["c2x0x3"] = {block:"1:2"}
-  setTimeout(function() {
-    renderGrid(GridObject.x_size,GridObject.z_size)
-    renderLayer(0)
+
+  GridObject.Cells["c1x1x1"] = {block:"2"}
+  GridObject.Cells["c2x1x1"] = {block:"2"}
+  GridObject.Cells["c4x1x4"] = {block:"3"}
+  setTimeout(function () {
     document.getElementById('imageHolder').parentNode.removeChild(document.getElementById('imageHolder'))
-  }, 30)
+  }, 10)
+  var previewDraw = setInterval(function() {renderLayer(0);console.log("renderimg...")}, 1);
+    var stopPreviewDraw = function() { clearInterval(previewDraw) }
+    setTimeout(stopPreviewDraw, 500)
 }
 //window.onload = setup;
 window.onload = setup
@@ -53,7 +58,6 @@ function add_Rdom() {
     list.push(i.toString())
   }
   //var list = ['1','2','3','4','5','7','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25']
-
   var rdmB = Math.floor(Math.random() * list.length)
   var crd = cellCord(rdmX,0,rdmZ)
   if (GridObject.Cells.hasOwnProperty[crd] == undefined) {

@@ -20,3 +20,11 @@ var GridObject = {
 function cellCord(x,y,z) {
   return 'c' + x + 'x' + y + 'x' + z;
 }
+function getBlock(cord) {
+  if (typeOf(GridObject.Cells[cord].block) != undefined) {
+    return GridObject.Cells[cord].block
+  }
+  else {
+    return undefined
+  }
+}
