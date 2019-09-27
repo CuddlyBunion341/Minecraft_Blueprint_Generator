@@ -2,12 +2,9 @@ function cellcord(x,y,z) {
   return "c" + x + "x" + y + "x" + z
 }
 function mtc(clf,sw,rw,mx,my,y) { //mtc => mouse to cord
-  //console.log(clf,sw,rw,mx,my,y);
-  //console.log(((mx * (sw / rw)) / clf + ((GridObject.translate_x / clf) - (GridObject.translate_x / clf) * 2)).toFixed(3),((my * (sw / rw)) / clf + ((GridObject.translate_z / clf) - (GridObject.translate_z / clf) * 2)).toFixed(3));
-  //console.log(clf,sw,rw,mx,my,y);
-  //console.log(sw/rw);
-  var x = Math.floor((mx * (sw / rw)) / clf + ((GridObject.translate_x / clf) - (GridObject.translate_x / clf) * 2)) + 1
-  var z = Math.floor((my * (sw / rw)) / clf + ((GridObject.translate_z / clf) - (GridObject.translate_z / clf) * 2)) + 1
+  ratio = sw / rw
+  var x = Math.floor(mx * ratio / clf + ((GridObject.translate_x / clf) - (GridObject.translate_x / clf) * 2))
+  var z = Math.floor(my * ratio / clf + ((GridObject.translate_z / clf) - (GridObject.translate_z / clf) * 2))
   return cellcord(x,y,z)
 }
 function getRandom(arr) {

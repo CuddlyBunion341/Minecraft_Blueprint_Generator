@@ -21,10 +21,13 @@ function cellCord(x,y,z) {
   return 'c' + x + 'x' + y + 'x' + z;
 }
 function getBlock(cord) {
-  if (typeOf(GridObject.Cells[cord].block) != undefined) {
+  if (typeof(GridObject.Cells[cord]) != "undefined" && typeof(GridObject.Cells[cord].block) != "undefined") {
     return GridObject.Cells[cord].block
   }
   else {
     return undefined
   }
+}
+function setBlock(cord,block) {
+  GridObject.Cells[cord] = {"block":block}
 }

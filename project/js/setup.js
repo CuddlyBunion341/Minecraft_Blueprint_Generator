@@ -43,8 +43,6 @@ function setup() {
     var stopPreviewDraw = function() { clearInterval(previewDraw) }
     setTimeout(stopPreviewDraw, 500)
 }
-//window.onload = setup;
-window.onload = setup
 function add_Rdom() {
   var x_size = GridObject.x_size
   var z_size = GridObject.z_size
@@ -78,4 +76,17 @@ function ChangeVersion(version) {
     default:
      //console.log('Version [' + version + '] caused an Error')
   }
+}
+function initCanvasVar() {
+  window.canvas = document.getElementById('Gridvisulator')
+  window.ctx = window.canvas.getContext('2d')
+  window.canvasG = document.getElementById('Graphicsvisulator')
+  window.ctxG = window.canvasG.getContext('2d')
+
+}
+window.onload = function(){
+  setup()
+  initCanvasVar()
+  initToolEvents()
+  console.log(GridObject);
 }

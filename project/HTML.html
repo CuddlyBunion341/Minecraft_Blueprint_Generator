@@ -10,6 +10,7 @@
     <script src="js/tools/line.js" charset="utf-8"></script>
     <script src="js/tools/tools.js" charset="utf-8"></script>
     <script src="js/tools/translate.js" charset="utf-8"></script>
+    <script src="js/tools/newbrush.js" charset="utf-8"></script>
     <script src="js/tools/clone.js" charset="utf-8"></script>
     <script src="js/tools/sphere.js" charset="utf-8"></script>
     <script src="js/tools/rect_select.js" charset="utf-8"></script>
@@ -41,6 +42,19 @@
       </div>
       <div id='main_render'>
         <div id="debug"></div>
+        <select id="brush_select">
+          <option value="brush">Brush</option>
+          <option value="rect_select">Rectangle Selection</option>
+          <option value="rect_draw">Rectangle draw</option>
+          <option value="line">Line</option>
+        </select>
+        <select id="material_select">
+          <option value="2">Grass</option>
+          <option value="1">stone</option>
+          <option value="20">glass</option>
+          <option value="0">air</option>
+        </select>
+        <br>
         <canvas id="Graphicsvisulator" width="300" height="300"></canvas>
         <canvas id="Gridvisulator" width="300" height="300"></canvas>
       </div>

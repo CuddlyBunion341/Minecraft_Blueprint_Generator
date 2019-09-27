@@ -1,3 +1,6 @@
+body {
+  overflow: hidden;
+}
 img,canvas {
   image-rendering: pixelated;
 }

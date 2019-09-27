@@ -38,7 +38,10 @@ function renderCell(cell_index) {
       //ctx.fillStyle = 'red'                                          //debug (sets fillcolor to red to be used below\/)
       //ctx.fillRect(x * clf + lw,z * clf + lw,clf - lw,clf - lw)      //debug (fills square with red color /\)
       //ctx.drawImage(texture,16 * idm, 16 * id,16,16,)
+      ctx.fillStyle = "#FFFFFF"
+      //ctx.fillRect(x * clf + lw,z * clf + lw,clf - lw,clf - lw)
       ctx.drawImage(texture,16 * idm,16 * id,16,16,x * clf + lw,z * clf + lw,clf - lw,clf - lw)
+      //ctx.drawImage(texture,16 * idm,16 * id,16,16,x * clf,z * clf,clf,clf)
       //ctx.drawImage(texture,16 * idm, 16 * id,16,16,clf * x + GridObject.translate_x + size / (100 / lw),clf * z + GridObject.translate_z + size / (100 / lw),size - (size / (100 / lw)) * 2,size - (size / (100 / lw)) * 2)
       // works but not aligning with renderGrid's 'Grid'
     }
@@ -76,7 +79,7 @@ function renderGrid(width,height,dl) {
   var c = document.getElementById('Gridvisulator')
   var ctx = c.getContext('2d')
   if (dl) {
-    ctx.clearRect(0,0,c.width,c.height) //deb
+    ctx.clearRect(0,0,c.width,c.height) //debug
   }
   var size = GridObject.zoom * GridObject.defaultsize
   var lw = GridObject.lineWidth
