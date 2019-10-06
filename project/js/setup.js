@@ -39,7 +39,7 @@ function setup() {
   setTimeout(function () {
     document.getElementById('imageHolder').parentNode.removeChild(document.getElementById('imageHolder'))
   }, 10)
-  var previewDraw = setInterval(function() {renderLayer(0);console.log("renderimg...")}, 1);
+  var previewDraw = setInterval(function() {renderLayer(0);}, 1);
     var stopPreviewDraw = function() { clearInterval(previewDraw) }
     setTimeout(stopPreviewDraw, 500)
 }
@@ -82,11 +82,21 @@ function initCanvasVar() {
   window.ctx = window.canvas.getContext('2d')
   window.canvasG = document.getElementById('Graphicsvisulator')
   window.ctxG = window.canvasG.getContext('2d')
-
+}
+function prepareSelect() {
+  document.getElementById('brush_select').onchange = function() {toolObj.tool = this.value;}
+}
+function updateGlobalVar() {
+  window.sw = canvas.width
+  window.rw = parseInt(canvas.style.width.split("px")[0])
+  window.size = GridObject.zoom * GridObject.defaultsize
+  window.lw = GridObject.lineWidth
+  window.clf = size - lw * 2
 }
 window.onload = function(){
   setup()
   initCanvasVar()
   initToolEvents()
-  console.log(GridObject);
+  prepareSelect()
+  updateGlobalVar()
 }

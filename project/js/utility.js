@@ -18,3 +18,9 @@ function deleteAir() {
     }
   }
 }
+function min(x,y) {
+  return Math.min(x,y)
+}
+function max(x,y) {
+  return Math.max(x,y)
+}

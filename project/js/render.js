@@ -16,6 +16,10 @@ function renderCell(cell_index) {
   lw = size / (100 / lw)      //lw = size / (100 / lw)
   ctx.lineWidth = lw
   var clf = size - lw * 2
+  var combinedRender = false
+  if (!combinedRender) {
+    ctx.clearRect(x * clf + lw,z * clf + lw,clf - lw,clf - lw)
+  }
   if (GridObject.Cells.hasOwnProperty(cell_index)) {
     var block = GridObject.Cells[cell_index].block
    //console.log('Block:');
@@ -39,7 +43,7 @@ function renderCell(cell_index) {
       //ctx.fillRect(x * clf + lw,z * clf + lw,clf - lw,clf - lw)      //debug (fills square with red color /\)
       //ctx.drawImage(texture,16 * idm, 16 * id,16,16,)
       ctx.fillStyle = "#FFFFFF"
-      //ctx.fillRect(x * clf + lw,z * clf + lw,clf - lw,clf - lw)
+      //ctx.fillRect(x * clf + lw,z * clf + lw,clf - 2 * lw,clf - 2 * lw)
       ctx.drawImage(texture,16 * idm,16 * id,16,16,x * clf + lw,z * clf + lw,clf - lw,clf - lw)
       //ctx.drawImage(texture,16 * idm,16 * id,16,16,x * clf,z * clf,clf,clf)
       //ctx.drawImage(texture,16 * idm, 16 * id,16,16,clf * x + GridObject.translate_x + size / (100 / lw),clf * z + GridObject.translate_z + size / (100 / lw),size - (size / (100 / lw)) * 2,size - (size / (100 / lw)) * 2)
@@ -49,10 +53,10 @@ function renderCell(cell_index) {
 
     }
   }
-  else {
-    ctx.fillStyle = "#FFFFFF"
+  /*if (GridObject.selected.includes(cell_index)) {
+    ctx.fillStyle = "rgba(0,0,255,0.1)"
     ctx.fillRect(x * clf + lw,z * clf + lw,clf - lw,clf - lw)
-  }
+  }*/
 }
 function renderCells(cell_arr) {
   for (var item in cell_arr) {
