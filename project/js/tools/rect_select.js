@@ -30,6 +30,8 @@ function calc(pos1,pos2,add,subtract) {
           if (!GridObject.selected.includes(gcord) && isInBounds(xi,zi)) {
             GridObject.selected.push(gcord)
             renderCell(gcord)
+            //////////////////////
+            storeAction()
           }
         }
       }
@@ -42,4 +44,6 @@ function deselect() {
   for (var i = 0; i < ols.length; i++) {
     renderCell(ols[i])
   }
+  //////////////////////
+  storeAction()
 }

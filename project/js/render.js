@@ -1,7 +1,4 @@
-var qwerty = 0
 function renderCell(cell_index) {
-  qwerty++
-  console.log(qwerty,cell_index);
  //console.log("rendering [",cell_index,"]");
   //declare all Variables
   var x = cell_index.split('x')[0].split('c')[1]

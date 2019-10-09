@@ -6,6 +6,8 @@ function newBrush() {
     if (getBlock(cord) != block && isInBounds(x,z)) {
       setBlock(cord,block)
       renderCell(cord) //This was usualy up top in the if statement, but some Cells won't rerender and be bugged
+      //////////////////////
+      storeAction()
     }
   }
 }

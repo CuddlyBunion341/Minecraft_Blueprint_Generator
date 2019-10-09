@@ -36,6 +36,7 @@ function setup() {
   GridObject.Cells["c1x1x1"] = {block:"2"}
   GridObject.Cells["c2x1x1"] = {block:"2"}
   GridObject.Cells["c4x1x4"] = {block:"3"}
+  storeAction()
   setTimeout(function () {
     document.getElementById('imageHolder').parentNode.removeChild(document.getElementById('imageHolder'))
   }, 10)

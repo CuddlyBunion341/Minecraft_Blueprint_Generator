@@ -1,12 +1,15 @@
-document.addEventListener('keyup',testkey)
+document.addEventListener('keydown',testkey)
 function testkey(e) {
-  switch (e.key) {
-    case "Escape":
-      deselect()
-      break;
-    case " ":
+  console.log(e.keyCode);
+  switch (e.keyCode) {
+    case 90:
+      if (e.metaKey && !e.shiftKey) {
+        undoAction()
+      }
+      else if (e.metaKey && e.shiftKey) {
+        redoAction()
+      }
       break;
     default:
-      console.log("Key: ",e.key);
   }
 }
