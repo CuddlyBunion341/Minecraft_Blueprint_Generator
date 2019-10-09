@@ -1,4 +1,7 @@
+var qwerty = 0
 function renderCell(cell_index) {
+  qwerty++
+  console.log(qwerty,cell_index);
  //console.log("rendering [",cell_index,"]");
   //declare all Variables
   var x = cell_index.split('x')[0].split('c')[1]
@@ -110,7 +113,19 @@ function renderGrid(width,height,dl) {
   }
 }
 function AutoZoom() {
-  var c = document.getElementById('Gridvisulator')
-  GridObject.zoom = parseInt(c.width) / parseInt(GridObject.x_size) / GridObject.defaultsize
+  GridObject.zoom = ZoomCalc()
   renderLayer(0,true)
+}
+function ZoomCalc() {
+  var c = document.getElementById('Gridvisulator')
+  // 2100                         = 80 * x * GridObject.x_size  | :80
+  //2100 / 80                     = x * GridObject.x_size       | :GridObject.x_size
+  //2100 / 80 / GridObject.x_size = x
+
+  if (GridObject.x_size > GridObject.z_size) {
+    return parseInt(c.width) / parseInt(GridObject.x_size) / GridObject.defaultsize
+  }
+  else {
+    return parseInt(c.width) / parseInt(GridObject.z_size) / GridObject.defaultsize
+  }
 }

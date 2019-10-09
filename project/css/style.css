@@ -44,3 +44,7 @@ img,canvas {
 #Graphicsvisulator {
   z-index: 999;
 }
+#canvas_holder {
+  position: relative;
+  /*top:100px*/
+}
