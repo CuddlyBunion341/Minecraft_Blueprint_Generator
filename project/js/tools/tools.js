@@ -1,5 +1,5 @@
 var toolObj = {
-  tool:"rect_select",
+  tool:"brush",
   drag:0,
   overCanvas:0,
   dsl:{},

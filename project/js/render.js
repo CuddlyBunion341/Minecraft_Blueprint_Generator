@@ -1,4 +1,5 @@
 function renderCell(cell_index) {
+ //console.log("rendering [",cell_index,"]");
   //declare all Variables
   var x = cell_index.split('x')[0].split('c')[1]
   var y = cell_index.split('x')[1]
@@ -33,9 +34,9 @@ function renderCell(cell_index) {
         var id = block
         var idm = 0
       }
-      var texture = new Image()
+      /*var texture = document.createElement("img") //new Image()
       texture.src = 'image-files/1.12/top.png'
-      texture.style.imageRendering = 'pixelated'
+      texture.style.imageRendering = 'pixelated'*/
      //console.log(texture);
       //ctx.drawImage(texture,16 * idm,16 *  id,16,16,)
       //ctx.drawImage(texture,16 * idm, 16 * id,16,16,0,0,size,size)
@@ -44,7 +45,17 @@ function renderCell(cell_index) {
       //ctx.drawImage(texture,16 * idm, 16 * id,16,16,)
       ctx.fillStyle = "#FFFFFF"
       //ctx.fillRect(x * clf + lw,z * clf + lw,clf - 2 * lw,clf - 2 * lw)
-      ctx.drawImage(texture,16 * idm,16 * id,16,16,x * clf + lw,z * clf + lw,clf - lw,clf - lw)
+
+      /*if (texture.complete) {
+       //console.log("LOADED :)");
+        ctx.drawImage(texture,16 * idm,16 * id,16,16,x * clf + lw,z * clf + lw,clf - lw,clf - lw)
+      } else {
+       //console.log("not LOADED :(");
+        texture.onload = function () {
+          ctx.drawImage(texture,16 * idm,16 * id,16,16,x * clf + lw,z * clf + lw,clf - lw,clf - lw)
+        };
+      }*/
+      ctx.drawImage(texture,16 * idm,16 * id,16,16,x * clf + lw,z * clf + lw,clf - lw,clf - lw) /////efuvy7ejdhufy4r3hui
       //ctx.drawImage(texture,16 * idm,16 * id,16,16,x * clf,z * clf,clf,clf)
       //ctx.drawImage(texture,16 * idm, 16 * id,16,16,clf * x + GridObject.translate_x + size / (100 / lw),clf * z + GridObject.translate_z + size / (100 / lw),size - (size / (100 / lw)) * 2,size - (size / (100 / lw)) * 2)
       // works but not aligning with renderGrid's 'Grid'
@@ -53,10 +64,10 @@ function renderCell(cell_index) {
 
     }
   }
-  /*if (GridObject.selected.includes(cell_index)) {
-    ctx.fillStyle = "rgba(0,0,255,0.1)"
+  if (GridObject.selected.includes(cell_index)) {
+    ctx.fillStyle = "rgba(0,0,255,0.5)"
     ctx.fillRect(x * clf + lw,z * clf + lw,clf - lw,clf - lw)
-  }*/
+  }
 }
 function renderCells(cell_arr) {
   for (var item in cell_arr) {
@@ -64,6 +75,7 @@ function renderCells(cell_arr) {
   }
 }
 function renderCellLayer(layer) {
+ //console.log('///////////////////');
   width = GridObject.x_size;
   height = GridObject.z_size;
   for (var x = 0; x < width; x++) {
@@ -72,6 +84,7 @@ function renderCellLayer(layer) {
       renderCell(cell_index)
     }
   }
+ //console.log('///////////////////');
 }
 function renderLayer(layer,dl) {
   width = GridObject.x_size;
@@ -98,6 +111,6 @@ function renderGrid(width,height,dl) {
 }
 function AutoZoom() {
   var c = document.getElementById('Gridvisulator')
-  GridObject.zoom = c.width / GridObject.x_size / GridObject.defaultSize
-  console.log(GridObject.zoom)
+  GridObject.zoom = parseInt(c.width) / parseInt(GridObject.x_size) / GridObject.defaultsize
+  renderLayer(0,true)
 }

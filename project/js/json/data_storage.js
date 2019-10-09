@@ -1,9 +1,9 @@
 var GridObject = {
   version:"1.12",
-  showtext: "0",
-  x_size: "8",
-  current_y: "0",
-  z_size: "8",
+  showtext: 0,
+  x_size: 8,
+  current_y: 0,
+  z_size: 8,
   zoom: 2.6,
   translate_x:0,
   translate_z:0,

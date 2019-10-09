@@ -39,9 +39,9 @@ function setup() {
   setTimeout(function () {
     document.getElementById('imageHolder').parentNode.removeChild(document.getElementById('imageHolder'))
   }, 10)
-  var previewDraw = setInterval(function() {renderLayer(0);}, 1);
+  /*var previewDraw = setInterval(function() {renderLayer(0,true);}, 1);
     var stopPreviewDraw = function() { clearInterval(previewDraw) }
-    setTimeout(stopPreviewDraw, 500)
+    setTimeout(stopPreviewDraw, 500)*/
 }
 function add_Rdom() {
   var x_size = GridObject.x_size
@@ -82,6 +82,12 @@ function initCanvasVar() {
   window.ctx = window.canvas.getContext('2d')
   window.canvasG = document.getElementById('Graphicsvisulator')
   window.ctxG = window.canvasG.getContext('2d')
+  window.texture = document.createElement("img") //new Image()
+  window.texture.src = 'image-files/1.12/top.png'
+  window.texture.style.imageRendering = 'pixelated'
+  window.texture.onload = function () {
+    renderLayer(0,true)
+  };
 }
 function prepareSelect() {
   document.getElementById('brush_select').onchange = function() {toolObj.tool = this.value;}

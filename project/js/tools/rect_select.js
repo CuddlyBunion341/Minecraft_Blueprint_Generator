@@ -14,21 +14,32 @@ function renderRect(startpos,endpos,add,subtract) {
   }
 }
 function calc(pos1,pos2,add,subtract) {
-  var cord1 = mtc(clf,sw,rw,pos1.x,pos1.y,0)
-  var cord2 = mtc(clf,sw,rw,pos2.x,pos2.y,0)
-  var x1 = parseInt(cord1.split("x")[0].split("c")[1])
-  var y1 = parseInt(cord1.split("x")[1])
-  var z1 = parseInt(cord1.split("x")[2])
-  var x2 = parseInt(cord2.split("x")[0].split("c")[1])
-  var y2 = parseInt(cord2.split("x")[1])
-  var z2 = parseInt(cord2.split("x")[2])
-  for (var xi = min(x1,x2); xi <= max(x1,x2); xi++) {
-    for (var yi = min(y1,y2); yi <= max(y1,y2); yi++) {
-      for (var zi = min(z1,z2); zi <= max(z1,z2); zi++) {
-        var gcord = cellcord(xi,yi,zi) //generated coordinate
-        GridObject.selected.push(gcord)
-        renderCell(gcord)
+  if (toolObj.tool == 'rect_select') {
+    var cord1 = mtc(clf,sw,rw,pos1.x,pos1.y,0)
+    var cord2 = mtc(clf,sw,rw,pos2.x,pos2.y,0)
+    var x1 = parseInt(cord1.split("x")[0].split("c")[1])
+    var y1 = parseInt(cord1.split("x")[1])
+    var z1 = parseInt(cord1.split("x")[2])
+    var x2 = parseInt(cord2.split("x")[0].split("c")[1])
+    var y2 = parseInt(cord2.split("x")[1])
+    var z2 = parseInt(cord2.split("x")[2])
+    for (var xi = min(x1,x2); xi <= max(x1,x2); xi++) {
+      for (var yi = min(y1,y2); yi <= max(y1,y2); yi++) {
+        for (var zi = min(z1,z2); zi <= max(z1,z2); zi++) {
+          var gcord = cellcord(xi,yi,zi) //generated coordinate
+          if (!GridObject.selected.includes(gcord) && isInBounds(xi,zi)) {
+            GridObject.selected.push(gcord)
+            renderCell(gcord)
+          }
+        }
       }
     }
+  }
+}
+function deselect() {
+  var ols = GridObject.selected
+  GridObject.selected = []
+  for (var i = 0; i < ols.length; i++) {
+    renderCell(ols[i])
   }
 }

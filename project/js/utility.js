@@ -24,3 +24,6 @@ function min(x,y) {
 function max(x,y) {
   return Math.max(x,y)
 }
+function isInBounds(x,z) {
+  return x + 1 <= GridObject.x_size && z + 1 <= GridObject.z_size && x > -1 && z > -1
+}
