@@ -13,6 +13,7 @@ function renderCell(cell_index) {
   }
   var canvas = document.getElementById('Gridvisulator');
   var ctx = canvas.getContext('2d');
+  ctx.globalCompositeOperation = "source-over"
   var lw = GridObject.lineWidth;
   lw = size / (100 / lw)      //lw = size / (100 / lw)
   ctx.lineWidth = lw
@@ -20,6 +21,8 @@ function renderCell(cell_index) {
   var combinedRender = false
   if (!combinedRender) {
     ctx.clearRect(x * clf + lw,z * clf + lw,clf - lw,clf - lw)
+    //ctx.fillStyle = "#FFFFFF"
+    //ctx.fillRect(x * clf + lw,z * clf + lw,clf - lw,clf - lw)
   }
   if (GridObject.Cells.hasOwnProperty(cell_index)) {
     var block = GridObject.Cells[cell_index].block
@@ -55,7 +58,8 @@ function renderCell(cell_index) {
           ctx.drawImage(texture,16 * idm,16 * id,16,16,x * clf + lw,z * clf + lw,clf - lw,clf - lw)
         };
       }*/
-      ctx.drawImage(texture,16 * idm,16 * id,16,16,x * clf + lw,z * clf + lw,clf - lw,clf - lw) /////efuvy7ejdhufy4r3hui
+      //ctx.drawImage(texture,16 * idm,16 * id,16,16,x * clf + lw,z * clf + lw,clf - lw,clf - lw) /////efuvy7ejdhufy4r3hui
+      ctx.drawImage(texture,16 * idm,16 * id,16,16,x * clf + lw,z * clf + lw,clf - lw,Math.round(clf - lw))
       //ctx.drawImage(texture,16 * idm,16 * id,16,16,x * clf,z * clf,clf,clf)
       //ctx.drawImage(texture,16 * idm, 16 * id,16,16,clf * x + GridObject.translate_x + size / (100 / lw),clf * z + GridObject.translate_z + size / (100 / lw),size - (size / (100 / lw)) * 2,size - (size / (100 / lw)) * 2)
       // works but not aligning with renderGrid's 'Grid'
@@ -65,8 +69,22 @@ function renderCell(cell_index) {
     }
   }
   if (GridObject.selected.includes(cell_index)) {
-    ctx.fillStyle = "rgba(0,0,255,0.5)"
-    ctx.fillRect(x * clf + lw,z * clf + lw,clf - lw,clf - lw)
+    //---------Stroke--------------
+    ctx.strokeStyle = "#00FFFF"      //lw = size / (100 / lw)
+    ctx.fillStyle='#FF00FF';
+    var lw2 = lw * GridObject.lineWidth_selected
+    ctx.lineWidth = lw2
+    //ctx.strokeRect(x * clf + lw * 1.5 + 0.5,z * clf + lw * 1.5 + 0.5,clf - lw * 2 - 1,clf - lw * 2 - 1) //worked!
+    //ctx.fillRect(x * clf + lw,z * clf + lw,clf - lw,clf - lw) Fills Entire Rect
+    ctx.strokeRect(x * clf + lw2 + 0.5,z * clf + lw2 + 0.5,clf - lw2 - lw - 1,clf - lw2 - lw - 1)
+    ////ctx.strokeRect(x * clf + lw * 1.5,z * clf + lw * 1.5,clf - lw * 2,clf - lw * 2) //different Stroke...
+    //---------Blue Fill---------
+    /*ctx.fillStyle = "rgba(0,0,255,0.5)"
+    ctx.fillRect(x * clf + lw,z * clf + lw,clf - lw,clf - lw)*/
+    //---------Invert------------
+    /*ctx.globalCompositeOperation='difference';
+    ctx.fillStyle='white';
+    ctx.fillRect(x * clf + lw,z * clf + lw,clf - lw,clf - lw)*/
   }
 }
 function renderCells(cell_arr) {
@@ -95,6 +113,7 @@ function renderLayer(layer,dl) {
 function renderGrid(width,height,dl) {
   var c = document.getElementById('Gridvisulator')
   var ctx = c.getContext('2d')
+  ctx.strokeStyle = "#000000"
   if (dl) {
     ctx.clearRect(0,0,c.width,c.height) //debug
   }
@@ -105,7 +124,8 @@ function renderGrid(width,height,dl) {
   var clf = size - lw * 2
   for (var w = 0; w < width; w++) {
     for (var h = 0; h < height; h++) {
-      ctx.strokeRect(w * clf + lw * 0.5,h * clf + lw * 0.5,clf,clf)
+      //ctx.strokeRect(w * clf + lw * 0.5,h * clf + lw * 0.5,clf,clf) //Worked
+      ctx.strokeRect(w * clf + lw * 0.5,h * clf + lw * 0.5,clf,Math.round(clf));//debug
     }
   }
 }

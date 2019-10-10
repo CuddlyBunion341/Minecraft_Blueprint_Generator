@@ -10,6 +10,7 @@ var GridObject = {
   defaultsize: 80,
   spacefactor: -1, //4
   lineWidth: 3.25,
+  lineWidth_selected:2,
   tool: "",
   Cells: {
   },

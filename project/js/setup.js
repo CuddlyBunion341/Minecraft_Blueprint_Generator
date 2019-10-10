@@ -81,6 +81,7 @@ function ChangeVersion(version) {
 function initCanvasVar() {
   window.canvas = document.getElementById('Gridvisulator')
   window.ctx = window.canvas.getContext('2d')
+  window.ctx.translate(0.5, 0.5);
   window.canvasG = document.getElementById('Graphicsvisulator')
   window.ctxG = window.canvasG.getContext('2d')
   window.texture = document.createElement("img") //new Image()
