@@ -1,8 +1,10 @@
 document.addEventListener('keydown',testkey)
 function testkey(e) {
-  console.log(e.keyCode);
   switch (e.keyCode) {
-    case 90:
+    case 27: //esc
+      deselect()
+      break;
+    case 90: //z
       if (e.metaKey && !e.shiftKey) {
         undoAction()
       }

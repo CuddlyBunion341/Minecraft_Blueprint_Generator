@@ -30,12 +30,12 @@ function calc(pos1,pos2,add,subtract) {
           if (!GridObject.selected.includes(gcord) && isInBounds(xi,zi)) {
             GridObject.selected.push(gcord)
             renderCell(gcord)
-            //////////////////////
-            storeAction()
           }
         }
       }
     }
+    //////////////////////
+    storeAction()
   }
 }
 function deselect() {
