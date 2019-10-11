@@ -76,7 +76,8 @@ function renderCell(cell_index) {
     ctx.lineWidth = lw2
     //ctx.strokeRect(x * clf + lw * 1.5 + 0.5,z * clf + lw * 1.5 + 0.5,clf - lw * 2 - 1,clf - lw * 2 - 1) //worked!
     //ctx.fillRect(x * clf + lw,z * clf + lw,clf - lw,clf - lw) Fills Entire Rect
-    ctx.strokeRect(x * clf + lw2 + 0.5,z * clf + lw2 + 0.5,clf - lw2 - lw - 1,clf - lw2 - lw - 1)
+    //ctx.strokeRect(x * clf + lw2 + 0.5,z * clf + lw2 + 0.5,clf - lw2 - lw - 1,clf - lw2 - lw - 1) // works for lw2 = lw * 2
+    ctx.strokeRect(x * clf + lw + lw2 / 2 + 0.5,z * clf + lw + lw2 / 2 + 0.5,clf - lw2 - lw - 1,clf - lw2 - lw - 1)
     ////ctx.strokeRect(x * clf + lw * 1.5,z * clf + lw * 1.5,clf - lw * 2,clf - lw * 2) //different Stroke...
     //---------Blue Fill---------
     /*ctx.fillStyle = "rgba(0,0,255,0.5)"
