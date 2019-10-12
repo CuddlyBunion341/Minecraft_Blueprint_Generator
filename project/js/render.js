@@ -112,6 +112,9 @@ function renderLayer(layer,dl) {
   renderCellLayer(layer)
 }
 function renderGrid(width,height,dl) {
+  if (GridObject.lineWidth == -1) {
+    return
+  }
   var c = document.getElementById('Gridvisulator')
   var ctx = c.getContext('2d')
   ctx.strokeStyle = "#000000"
@@ -132,7 +135,7 @@ function renderGrid(width,height,dl) {
 }
 function AutoZoom() {
   GridObject.zoom = ZoomCalc()
-  renderLayer(0,true)
+  renderLayer(GridObject.current_y,true)
 }
 function ZoomCalc() {
   var c = document.getElementById('Gridvisulator')

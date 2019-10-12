@@ -43,5 +43,5 @@ function redoAction() {
 function updateAction() {
   GridObject.Cells = (JSON.parse(UndoObj.memory[UndoObj.memory.length - UndoObj.reader][0]));
   GridObject.selected = (JSON.parse(UndoObj.memory[UndoObj.memory.length - UndoObj.reader][1]));
-  renderLayer(0,true)
+  renderLayer(GridObject.current_y,true)
 }

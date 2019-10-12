@@ -47,7 +47,7 @@ function dragStart(e) {
   var clf = size - lw * 2
   ///////////////////////////////////////////
   w = 100
-  cord = mtc(clf,sw,rw,mx,my,0)
+  cord = mtc(clf,sw,rw,mx,my,GridObject.current_y)
   ctx.fillStyle = "#FF6600"
   ctx.font = "30px Arial";
   //ctx.fillText(cord, mxC - 15, myC);
@@ -101,7 +101,7 @@ function drag(e) {
   var myC = my * ratio
   mxC = parseFloat(mxC.toFixed(3))
   myC = parseFloat(myC.toFixed(3))
-  cord = mtc(clf,sw,rw,mx,my,0)
+  cord = mtc(clf,sw,rw,mx,my,GridObject.current_y)
   toolObj.ccl = getCanvasMousePos(e) //canvas curent location
   document.getElementById('debug').innerHTML = cord
   //brush()
@@ -128,7 +128,7 @@ function fillscr() {
   var clf = size - lw * 2
   for (var i = 0; i < 2100; i++) {
     for (var a = 0; a < 2100; a++) {
-      cord = mtc(clf,sw,rw,i,a,0)
+      cord = mtc(clf,sw,rw,i,a,GridObject.current_y)
       x = parseInt(cord.split("x")[0].split("c")[1])
       z = parseInt(cord.split("x")[2])
       if (x.toString().length == 1) {

@@ -55,6 +55,7 @@
           <option value="20">glass</option>
           <option value="0">air</option>
         </select>
+        <input type="number" value=0 onchange="GridObject.current_y = this.value; renderLayer(GridObject.current_y,true)"></input>
         <br>
         <canvas id="Graphicsvisulator" width="300" height="300"></canvas>
         <canvas id="Gridvisulator" width="300" height="300"></canvas>

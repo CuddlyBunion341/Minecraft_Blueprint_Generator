@@ -40,7 +40,7 @@ function setup() {
   setTimeout(function () {
     document.getElementById('imageHolder').parentNode.removeChild(document.getElementById('imageHolder'))
   }, 10)
-  /*var previewDraw = setInterval(function() {renderLayer(0,true);}, 1);
+  /*var previewDraw = setInterval(function() {renderLayer(GridObject.current_y,true);}, 1);
     var stopPreviewDraw = function() { clearInterval(previewDraw) }
     setTimeout(stopPreviewDraw, 500)*/
 }
@@ -88,7 +88,7 @@ function initCanvasVar() {
   window.texture.src = 'image-files/1.12/top.png'
   window.texture.style.imageRendering = 'pixelated'
   window.texture.onload = function () {
-    renderLayer(0,true)
+    renderLayer(GridObject.current_y,true)
   };
 }
 function prepareSelect() {

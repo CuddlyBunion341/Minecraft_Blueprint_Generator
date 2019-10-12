@@ -25,5 +25,6 @@ function max(x,y) {
   return Math.max(x,y)
 }
 function isInBounds(x,z) {
+  console.log(x + 1 <= GridObject.x_size && z + 1 <= GridObject.z_size && x > -1 && z > -1);
   return x + 1 <= GridObject.x_size && z + 1 <= GridObject.z_size && x > -1 && z > -1
 }
