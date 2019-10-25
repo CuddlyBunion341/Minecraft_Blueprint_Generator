@@ -102,9 +102,10 @@ function updateGlobalVar() {
   window.clf = size - lw * 2
 }
 window.onload = function(){
-  setup()
+  setup();
   initCanvasVar()
   initToolEvents()
   prepareSelect()
   updateGlobalVar()
+  fillUl(blocklist_1_12)
 }

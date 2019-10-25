@@ -81,6 +81,7 @@ function dragStart(e) {
   //ctx.fillRect((mx * (sw / rw)),(my * (sw / rw)),s,s)
   newBrush()
   renderRect(toolObj.dsl,toolObj.ccl,false,false)
+  floodfill()
 }
 function drag(e) {
   //var canvas = document.getElementById('Gridvisulator')

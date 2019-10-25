@@ -48,3 +48,26 @@ img,canvas {
   position: relative;
   /*top:100px*/
 }
+.pal_content_image {
+  border: none;
+  border: 1px solid black;
+  margin: 2px;
+  float: left;
+  background-image: url(../image-files/1.12/top.png );
+  background-size: 768px 12288px;
+  image-rendering: pixelated;
+  width: 48px;
+  height: 48px;
+  background-repeat: no-repeat;
+  /* position: absolute; */
+}
+#block_ul {
+    width: 100%;
+    height: 400px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    border: 1px solid #bbb;
+}
+.selected {
+    box-shadow: 0px 0px 0px 2px rgba(0,174,255,1);
+}

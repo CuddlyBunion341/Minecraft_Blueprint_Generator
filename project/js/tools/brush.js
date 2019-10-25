@@ -1,6 +1,7 @@
 function newBrush() {
   if (toolObj.tool == 'brush' && toolObj.drag == 1) {
-    var block = document.getElementById('material_select').value
+    //var block = document.getElementById('material_select').value
+		var block = getMaterial()
     var x = parseInt(cord.split("x")[0].split("c")[1])
     var z = parseInt(cord.split("x")[2])
     if (getBlock(cord) != block && isInBounds(x,z)) {

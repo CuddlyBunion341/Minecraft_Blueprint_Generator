@@ -8,10 +8,12 @@
     <script src="js/keyboardinputs.js" charset="utf-8"></script>
     <script src="js/render.js" charset="utf-8"></script>
     <script src="js/setup.js" charset="utf-8"></script>
+    <script src="js/blockUl.js" charset="utf-8"></script>
     <script src="js/undo.js" charset="utf-8"></script>
     <script src="js/tools/line.js" charset="utf-8"></script>
     <script src="js/tools/tools.js" charset="utf-8"></script>
     <script src="js/tools/translate.js" charset="utf-8"></script>
+    <script src="js/tools/floodfill.js" charset="utf-8"></script>
     <script src="js/tools/clone.js" charset="utf-8"></script>
     <script src="js/tools/sphere.js" charset="utf-8"></script>
     <script src="js/tools/rect_select.js" charset="utf-8"></script>
@@ -46,6 +48,7 @@
         <select id="brush_select">
           <option value="brush">Brush</option>
           <option value="rect_select">Rectangle Selection</option>
+          <option value="floodfill">Floodfill</option>
           <option value="rect_draw">Rectangle draw</option>
           <option value="line">Line</option>
         </select>
@@ -59,6 +62,7 @@
         <br>
         <canvas id="Graphicsvisulator" width="300" height="300"></canvas>
         <canvas id="Gridvisulator" width="300" height="300"></canvas>
+        <div id="tooltip"></div>
       </div>
     <!--</div>-->
   </body>
