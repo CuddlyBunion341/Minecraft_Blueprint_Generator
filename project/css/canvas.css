@@ -1,0 +1,16 @@
+body {
+  overflow: hidden;
+}
+img,canvas {
+  image-rendering: pixelated;
+}
+#Graphicsvisulator, #Gridvisulator {
+  position: absolute;
+}
+#Graphicsvisulator {
+  z-index: 999;
+}
+#canvas_holder {
+  position: relative;
+  /*top:100px*/
+}

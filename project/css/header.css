@@ -1,0 +1,27 @@
+#header {
+  font-family: sans-serif;
+}
+#navbar {
+  width:100%;
+  border-bottom: 5px solid #000;
+  border-top: 5px solid #000;
+  overflow: hidden;
+  margin-bottom:10px;
+}
+#navbar a {
+  padding: 14px 16px;
+  float: left;
+  /*background-color: #ff00ff;*/
+  text-decoration:none;
+  color:black;
+}
+#navbar a:hover {
+  /*background-color: #ff0000;*/
+}
+#navbar a.active {
+  color:blue;
+}
+#version-changer {
+  position: relative;
+  top:-6px;
+}
