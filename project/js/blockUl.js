@@ -62,17 +62,23 @@ function fillUl() {
       added_e.addEventListener('mouseleave',function (e) {
       })
       if (i == 0) {
-        selectElement(added_e)
+        selectElement(added_e,true)
       }
     }
     return;
   }
 }
-function selectElement(element) {
+function selectElement(element,ignore_sound = false) {
+  if (element.classList.contains('selected')) {
+    return
+  }
   for (var i = 0; i < element.parentNode.children.length; i++) {
     element.parentNode.children[i].classList.remove('selected')
   }
   element.classList.add('selected')
+  if (!ignore_sound) {
+    playAnySound("../project/audio/menu/wood%20click.ogg",0.5)
+  }
 }
 function updateBlockStates(block) {
 
@@ -91,27 +97,55 @@ function prepUl() {
     var y = e.clientY
     var tt = document.getElementById('tooltip')
     var bounding = tt.getBoundingClientRect();
-    tt.style.left = e.clientX - bounding.width - 20
-    tt.style.top = e.clientY - bounding.height / 2
+    tt.style.left = e.clientX - bounding.width - 20 + "px"
+    tt.style.top = e.clientY - bounding.height / 2 + "px"
+  })
+  document.getElementById('block_ul').addEventListener('mouseenter',function(e) {
+    var tt = document.getElementById('tooltip')
+    tt.style.opacity = 1
+  })
+  document.getElementById('block_ul').addEventListener('mouseleave',function(e) {
+    var tt = document.getElementById('tooltip')
+    tt.style.opacity = 0
   })
 }
 function rename(display,id,base) {
-  var tt = document.getElementById('tooltip')
-  while (tt.firstChild) {
-    tt.removeChild(tt.firstChild);
+  if (GridObject.version == "1.12") {
+    var tt = document.getElementById('tooltip')
+    while (tt.firstChild) {
+      tt.removeChild(tt.firstChild);
+    }
+    if (id.includes(':')) {
+      idc = id.replace(':','/')
+    }
+    else {
+      idc = id + '/' + 0
+    }
+    var d_el = document.createElement("div")
+    d_el.innerHTML = display + ' (' + textFusion('#0000',idc.split('/')[0]) + '/' + idc.split('/')[1] + ')'
+    d_el.style.textShadow = '2px 2px #413E40'
+    tt.appendChild(d_el)
+    var b_el = document.createElement("div")
+    b_el.innerHTML = base
+    b_el.style.color = '#595659'
+    b_el.style.textShadow = '2px 2px #141314'
+    tt.appendChild(b_el)
+    return;
   }
-  if (id.includes(':')) {
-    idc = id.replace(':','/')
+  if (GridObject.version == "1.14") {
+    var tt = document.getElementById('tooltip')
+    while (tt.firstChild) {
+      tt.removeChild(tt.firstChild);
+    }
+    var d_el = document.createElement("div")
+    d_el.innerHTML = display
+    d_el.style.textShadow = '2px 2px #413E40'
+    tt.appendChild(d_el)
+    var b_el = document.createElement("div")
+    b_el.innerHTML = base
+    b_el.style.color = '#595659'
+    b_el.style.textShadow = '2px 2px #141314'
+    tt.appendChild(b_el)
+    return;
   }
-  else {
-    idc = id + '/' + 0
-  }
-  var d_el = document.createElement("div")
-  d_el.innerHTML = display + ' (' + textFusion('#0000',idc.split('/')[0]) + '/' + idc.split('/')[1] + ')'
-  d_el.style.textShadow = '2px 2px #413E40'
-  tt.appendChild(d_el)
-  var b_el = document.createElement("div")
-  b_el.innerHTML = base
-  b_el.style.color = '#595659'
-  b_el.style.textShadow = '2px 2px #141314'
 }//<div id="tooltip" style="display: block; left: 500px; top: -15px; opacity: 0;"><div style="text-shadow: rgb(65, 62, 64) 2px 2px;">Polished Andesite (#0001/6)</div><div style="color: rgb(89, 86, 89); text-shadow: rgb(20, 19, 20) 2px 2px;">(minecraft:stone)</div></div>

@@ -9,7 +9,7 @@ function newBrush() {
       renderCell(cord) //This was usualy up top in the if statement, but some Cells won't rerender and be bugged
       //////////////////////
       storeAction()
-      playAudio(getSound(block),false)
+      playBlockSound(getSound(block))
     }
   }
 }

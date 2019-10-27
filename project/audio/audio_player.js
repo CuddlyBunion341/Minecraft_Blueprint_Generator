@@ -25,7 +25,7 @@ function getSound(block) {
   }
   return 'stone'
 }
-function playAudio(block = "snow",crazy = false) {
+function playBlockSound(block = "snow",crazy = false) {
   if (AudioObject.allowAudio) {
     var numbers = ["1","2","3","4"]
     if (crazy) {
@@ -33,7 +33,7 @@ function playAudio(block = "snow",crazy = false) {
       var block = crazy[Math.floor(Math.random()*crazy.length)];
     }
     var pre;
-    var maindir = "../project/audio/"
+    var maindir = "../project/audio/block/"
     switch (block) {
       case "cloth":
         pre = "cloth/cloth"
@@ -65,4 +65,11 @@ function playAudio(block = "snow",crazy = false) {
     a.volume = AudioObject.volume
     a.play();
   }
+}
+function playAnySound(sound_path,volume = 1,play_back_speed = 1) {
+  var a = new Audio();
+  a.src = sound_path
+  a.playbackRate = play_back_speed
+  a.volume = volume
+  a.play()
 }

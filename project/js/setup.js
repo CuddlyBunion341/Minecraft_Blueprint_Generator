@@ -121,5 +121,6 @@ window.onload = function(){
   initToolEvents()
   prepareSelect()
   updateGlobalVar()
+  prepUl()
   fillUl()
 }

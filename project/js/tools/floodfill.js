@@ -6,6 +6,7 @@ function floodfill() {
     console.log(cord);
     floodfillF(cord,paper,block)
     storeAction()
+    playBlockSound(getSound(block))
   }
 }
 function floodfillF(cord,paper,block) {
