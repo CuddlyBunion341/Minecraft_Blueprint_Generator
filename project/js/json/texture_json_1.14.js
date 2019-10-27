@@ -1,4 +1,4 @@
-var blocklist_1_14OLD = [
+var blocklist_1_14 = [
   {
     "display": "Acacia Button",
     "id": "acacia_button",
@@ -78,6 +78,10 @@ var blocklist_1_14OLD = [
         ],
         "default": "false"
       }
+    ],
+    "texture_cord": [
+      17,
+      6
     ]
   },
   {
@@ -173,15 +177,15 @@ var blocklist_1_14OLD = [
       {
         "stateName": "distance",
         "values": [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6",
-          "7"
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
         ],
-        "default": "1"
+        "default": 1
       },
       {
         "stateName": "persistent",
@@ -191,6 +195,10 @@ var blocklist_1_14OLD = [
         ],
         "default": "false"
       }
+    ],
+    "texture_cord": [
+      17,
+      10
     ]
   },
   {
@@ -206,12 +214,20 @@ var blocklist_1_14OLD = [
         ],
         "default": "y"
       }
+    ],
+    "texture_cord": [
+      17,
+      1
     ]
   },
   {
     "display": "Acacia Planks",
     "id": "acacia_planks",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      17,
+      3
+    ]
   },
   {
     "display": "Acacia Pressure Plate",
@@ -234,11 +250,15 @@ var blocklist_1_14OLD = [
       {
         "stateName": "stage",
         "values": [
-          "0",
-          "1"
+          0,
+          1
         ],
-        "default": "0"
+        "default": 0
       }
+    ],
+    "texture_cord": [
+      17,
+      4
     ]
   },
   {
@@ -248,24 +268,24 @@ var blocklist_1_14OLD = [
       {
         "stateName": "rotation",
         "values": [
-          "0",
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6",
-          "7",
-          "8",
-          "9",
-          "10",
-          "11",
-          "12",
-          "13",
-          "14",
-          "15"
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
         ],
-        "default": "0"
+        "default": 0
       },
       {
         "stateName": "waterlogged",
@@ -389,6 +409,10 @@ var blocklist_1_14OLD = [
         ],
         "default": "false"
       }
+    ],
+    "texture_cord": [
+      17,
+      7
     ]
   },
   {
@@ -471,7 +495,11 @@ var blocklist_1_14OLD = [
   {
     "display": "Andesite",
     "id": "andesite",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      16,
+      11
+    ]
   },
   {
     "display": "Andesite Slab",
@@ -655,10 +683,10 @@ var blocklist_1_14OLD = [
       {
         "stateName": "age",
         "values": [
-          "0",
-          "1"
+          0,
+          1
         ],
-        "default": "0"
+        "default": 0
       },
       {
         "stateName": "leaves",
@@ -672,10 +700,10 @@ var blocklist_1_14OLD = [
       {
         "stateName": "stage",
         "values": [
-          "0",
-          "1"
+          0,
+          1
         ],
-        "default": "0"
+        "default": 0
       }
     ]
   },
@@ -686,10 +714,10 @@ var blocklist_1_14OLD = [
       {
         "stateName": "stage",
         "values": [
-          "0",
-          "1"
+          0,
+          1
         ],
-        "default": "0"
+        "default": 0
       }
     ]
   },
@@ -742,12 +770,12 @@ var blocklist_1_14OLD = [
       {
         "stateName": "age",
         "values": [
-          "0",
-          "1",
-          "2",
-          "3"
+          0,
+          1,
+          2,
+          3
         ],
-        "default": "0"
+        "default": 0
       }
     ]
   },
@@ -856,6 +884,10 @@ var blocklist_1_14OLD = [
         ],
         "default": "false"
       }
+    ],
+    "texture_cord": [
+      15,
+      6
     ]
   },
   {
@@ -951,15 +983,15 @@ var blocklist_1_14OLD = [
       {
         "stateName": "distance",
         "values": [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6",
-          "7"
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
         ],
-        "default": "1"
+        "default": 1
       },
       {
         "stateName": "persistent",
@@ -969,6 +1001,10 @@ var blocklist_1_14OLD = [
         ],
         "default": "false"
       }
+    ],
+    "texture_cord": [
+      15,
+      10
     ]
   },
   {
@@ -984,12 +1020,20 @@ var blocklist_1_14OLD = [
         ],
         "default": "y"
       }
+    ],
+    "texture_cord": [
+      15,
+      1
     ]
   },
   {
     "display": "Birch Planks",
     "id": "birch_planks",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      15,
+      3
+    ]
   },
   {
     "display": "Birch Pressure Plate",
@@ -1012,11 +1056,15 @@ var blocklist_1_14OLD = [
       {
         "stateName": "stage",
         "values": [
-          "0",
-          "1"
+          0,
+          1
         ],
-        "default": "0"
+        "default": 0
       }
+    ],
+    "texture_cord": [
+      15,
+      4
     ]
   },
   {
@@ -1026,24 +1074,24 @@ var blocklist_1_14OLD = [
       {
         "stateName": "rotation",
         "values": [
-          "0",
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6",
-          "7",
-          "8",
-          "9",
-          "10",
-          "11",
-          "12",
-          "13",
-          "14",
-          "15"
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
         ],
-        "default": "0"
+        "default": 0
       },
       {
         "stateName": "waterlogged",
@@ -1167,6 +1215,10 @@ var blocklist_1_14OLD = [
         ],
         "default": "false"
       }
+    ],
+    "texture_cord": [
+      15,
+      7
     ]
   },
   {
@@ -1226,24 +1278,24 @@ var blocklist_1_14OLD = [
       {
         "stateName": "rotation",
         "values": [
-          "0",
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6",
-          "7",
-          "8",
-          "9",
-          "10",
-          "11",
-          "12",
-          "13",
-          "14",
-          "15"
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
         ],
-        "default": "0"
+        "default": 0
       }
     ]
   },
@@ -1287,12 +1339,20 @@ var blocklist_1_14OLD = [
   {
     "display": "Black Concrete Powder",
     "id": "black_concrete_powder",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      26,
+      6
+    ]
   },
   {
     "display": "Black Concrete",
     "id": "black_concrete",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      26,
+      8
+    ]
   },
   {
     "display": "Black Glazed Terracotta",
@@ -1308,6 +1368,10 @@ var blocklist_1_14OLD = [
         ],
         "default": "north"
       }
+    ],
+    "texture_cord": [
+      26,
+      14
     ]
   },
   {
@@ -1326,12 +1390,20 @@ var blocklist_1_14OLD = [
         ],
         "default": "up"
       }
+    ],
+    "texture_cord": [
+      26,
+      10
     ]
   },
   {
     "display": "Black Stained Glass",
     "id": "black_stained_glass",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      26,
+      2
+    ]
   },
   {
     "display": "Black Stained Glass Pane",
@@ -1382,7 +1454,11 @@ var blocklist_1_14OLD = [
   {
     "display": "Black Terracotta",
     "id": "black_terracotta",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      26,
+      12
+    ]
   },
   {
     "unobtainable": "true",
@@ -1404,7 +1480,11 @@ var blocklist_1_14OLD = [
   {
     "display": "Black Wool",
     "id": "black_wool",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      26,
+      4
+    ]
   },
   {
     "display": "Blast Furnace",
@@ -1437,24 +1517,24 @@ var blocklist_1_14OLD = [
       {
         "stateName": "rotation",
         "values": [
-          "0",
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6",
-          "7",
-          "8",
-          "9",
-          "10",
-          "11",
-          "12",
-          "13",
-          "14",
-          "15"
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
         ],
-        "default": "0"
+        "default": 0
       }
     ]
   },
@@ -1498,12 +1578,20 @@ var blocklist_1_14OLD = [
   {
     "display": "Blue Concrete Powder",
     "id": "blue_concrete_powder",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      22,
+      6
+    ]
   },
   {
     "display": "Blue Concrete",
     "id": "blue_concrete",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      22,
+      8
+    ]
   },
   {
     "display": "Blue Glazed Terracotta",
@@ -1519,6 +1607,10 @@ var blocklist_1_14OLD = [
         ],
         "default": "north"
       }
+    ],
+    "texture_cord": [
+      22,
+      14
     ]
   },
   {
@@ -1547,12 +1639,20 @@ var blocklist_1_14OLD = [
         ],
         "default": "up"
       }
+    ],
+    "texture_cord": [
+      22,
+      10
     ]
   },
   {
     "display": "Blue Stained Glass",
     "id": "blue_stained_glass",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      22,
+      2
+    ]
   },
   {
     "display": "Blue Stained Glass Pane",
@@ -1603,7 +1703,11 @@ var blocklist_1_14OLD = [
   {
     "display": "Blue Terracotta",
     "id": "blue_terracotta",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      22,
+      12
+    ]
   },
   {
     "unobtainable": "true",
@@ -1625,7 +1729,11 @@ var blocklist_1_14OLD = [
   {
     "display": "Blue Wool",
     "id": "blue_wool",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      22,
+      4
+    ]
   },
   {
     "display": "Bone Block",
@@ -1659,12 +1767,20 @@ var blocklist_1_14OLD = [
         ],
         "default": "false"
       }
+    ],
+    "texture_cord": [
+      20,
+      23
     ]
   },
   {
     "display": "Brain Coral Block",
     "id": "brain_coral_block",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      20,
+      24
+    ]
   },
   {
     "display": "Brain Coral Fan",
@@ -1678,6 +1794,10 @@ var blocklist_1_14OLD = [
         ],
         "default": "false"
       }
+    ],
+    "texture_cord": [
+      20,
+      22
     ]
   },
   {
@@ -1867,24 +1987,24 @@ var blocklist_1_14OLD = [
       {
         "stateName": "rotation",
         "values": [
-          "0",
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6",
-          "7",
-          "8",
-          "9",
-          "10",
-          "11",
-          "12",
-          "13",
-          "14",
-          "15"
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
         ],
-        "default": "0"
+        "default": 0
       }
     ]
   },
@@ -1928,12 +2048,20 @@ var blocklist_1_14OLD = [
   {
     "display": "Brown Concrete Powder",
     "id": "brown_concrete_powder",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      23,
+      6
+    ]
   },
   {
     "display": "Brown Concrete",
     "id": "brown_concrete",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      23,
+      8
+    ]
   },
   {
     "display": "Brown Glazed Terracotta",
@@ -1949,6 +2077,10 @@ var blocklist_1_14OLD = [
         ],
         "default": "north"
       }
+    ],
+    "texture_cord": [
+      23,
+      14
     ]
   },
   {
@@ -2026,12 +2158,20 @@ var blocklist_1_14OLD = [
         ],
         "default": "up"
       }
+    ],
+    "texture_cord": [
+      23,
+      10
     ]
   },
   {
     "display": "Brown Stained Glass",
     "id": "brown_stained_glass",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      23,
+      2
+    ]
   },
   {
     "display": "Brown Stained Glass Pane",
@@ -2082,7 +2222,11 @@ var blocklist_1_14OLD = [
   {
     "display": "Brown Terracotta",
     "id": "brown_terracotta",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      23,
+      12
+    ]
   },
   {
     "unobtainable": "true",
@@ -2104,7 +2248,11 @@ var blocklist_1_14OLD = [
   {
     "display": "Brown Wool",
     "id": "brown_wool",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      23,
+      4
+    ]
   },
   {
     "display": "Bubble Column",
@@ -2132,12 +2280,20 @@ var blocklist_1_14OLD = [
         ],
         "default": "false"
       }
+    ],
+    "texture_cord": [
+      22,
+      23
     ]
   },
   {
     "display": "Bubble Coral Block",
     "id": "bubble_coral_block",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      22,
+      24
+    ]
   },
   {
     "display": "Bubble Coral Fan",
@@ -2151,6 +2307,10 @@ var blocklist_1_14OLD = [
         ],
         "default": "false"
       }
+    ],
+    "texture_cord": [
+      22,
+      22
     ]
   },
   {
@@ -2185,24 +2345,24 @@ var blocklist_1_14OLD = [
       {
         "stateName": "age",
         "values": [
-          "0",
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6",
-          "7",
-          "8",
-          "9",
-          "10",
-          "11",
-          "12",
-          "13",
-          "14",
-          "15"
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
         ],
-        "default": "0"
+        "default": 0
       }
     ]
   },
@@ -2213,15 +2373,15 @@ var blocklist_1_14OLD = [
       {
         "stateName": "bites",
         "values": [
-          "0",
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6"
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
         ],
-        "default": "0"
+        "default": 0
       }
     ]
   },
@@ -2273,16 +2433,16 @@ var blocklist_1_14OLD = [
       {
         "stateName": "age",
         "values": [
-          "0",
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6",
-          "7"
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
         ],
-        "default": "0"
+        "default": 0
       }
     ]
   },
@@ -2314,12 +2474,12 @@ var blocklist_1_14OLD = [
       {
         "stateName": "level",
         "values": [
-          "0",
-          "1",
-          "2",
-          "3"
+          0,
+          1,
+          2,
+          3
         ],
-        "default": "0"
+        "default": 0
       }
     ]
   },
@@ -2431,14 +2591,14 @@ var blocklist_1_14OLD = [
       {
         "stateName": "age",
         "values": [
-          "0",
-          "1",
-          "2",
-          "3",
-          "4",
-          "5"
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
         ],
-        "default": "0"
+        "default": 0
       }
     ]
   },
@@ -2504,12 +2664,20 @@ var blocklist_1_14OLD = [
   {
     "display": "Block of Coal",
     "id": "coal_block",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      19,
+      16
+    ]
   },
   {
     "display": "Coal Ore",
     "id": "coal_ore",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      19,
+      15
+    ]
   },
   {
     "display": "Coarse Dirt",
@@ -2653,11 +2821,11 @@ var blocklist_1_14OLD = [
       {
         "stateName": "age",
         "values": [
-          "0",
-          "1",
-          "2"
+          0,
+          1,
+          2
         ],
-        "default": "0"
+        "default": 0
       },
       {
         "stateName": "facing",
@@ -2736,17 +2904,17 @@ var blocklist_1_14OLD = [
       {
         "stateName": "level",
         "values": [
-          "0",
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6",
-          "7",
-          "8"
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
         ],
-        "default": "0"
+        "default": 0
       }
     ]
   },
@@ -2786,24 +2954,24 @@ var blocklist_1_14OLD = [
       {
         "stateName": "rotation",
         "values": [
-          "0",
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6",
-          "7",
-          "8",
-          "9",
-          "10",
-          "11",
-          "12",
-          "13",
-          "14",
-          "15"
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
         ],
-        "default": "0"
+        "default": 0
       }
     ]
   },
@@ -2851,24 +3019,24 @@ var blocklist_1_14OLD = [
       {
         "stateName": "rotation",
         "values": [
-          "0",
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6",
-          "7",
-          "8",
-          "9",
-          "10",
-          "11",
-          "12",
-          "13",
-          "14",
-          "15"
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
         ],
-        "default": "0"
+        "default": 0
       }
     ]
   },
@@ -2912,12 +3080,20 @@ var blocklist_1_14OLD = [
   {
     "display": "Cyan Concrete Powder",
     "id": "cyan_concrete_powder",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      20,
+      6
+    ]
   },
   {
     "display": "Cyan Concrete",
     "id": "cyan_concrete",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      20,
+      8
+    ]
   },
   {
     "display": "Cyan Glazed Terracotta",
@@ -2933,6 +3109,10 @@ var blocklist_1_14OLD = [
         ],
         "default": "north"
       }
+    ],
+    "texture_cord": [
+      20,
+      14
     ]
   },
   {
@@ -2951,12 +3131,20 @@ var blocklist_1_14OLD = [
         ],
         "default": "up"
       }
+    ],
+    "texture_cord": [
+      20,
+      10
     ]
   },
   {
     "display": "Cyan Stained Glass",
     "id": "cyan_stained_glass",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      20,
+      2
+    ]
   },
   {
     "display": "Cyan Stained Glass Pane",
@@ -3007,7 +3195,11 @@ var blocklist_1_14OLD = [
   {
     "display": "Cyan Terracotta",
     "id": "cyan_terracotta",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      20,
+      12
+    ]
   },
   {
     "unobtainable": "true",
@@ -3029,7 +3221,11 @@ var blocklist_1_14OLD = [
   {
     "display": "Cyan Wool",
     "id": "cyan_wool",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      20,
+      4
+    ]
   },
   {
     "display": "Damaged Anvil",
@@ -3131,6 +3327,10 @@ var blocklist_1_14OLD = [
         ],
         "default": "false"
       }
+    ],
+    "texture_cord": [
+      18,
+      6
     ]
   },
   {
@@ -3226,15 +3426,15 @@ var blocklist_1_14OLD = [
       {
         "stateName": "distance",
         "values": [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6",
-          "7"
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
         ],
-        "default": "1"
+        "default": 1
       },
       {
         "stateName": "persistent",
@@ -3244,6 +3444,10 @@ var blocklist_1_14OLD = [
         ],
         "default": "false"
       }
+    ],
+    "texture_cord": [
+      18,
+      10
     ]
   },
   {
@@ -3259,12 +3463,20 @@ var blocklist_1_14OLD = [
         ],
         "default": "y"
       }
+    ],
+    "texture_cord": [
+      18,
+      1
     ]
   },
   {
     "display": "Dark Oak Planks",
     "id": "dark_oak_planks",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      18,
+      3
+    ]
   },
   {
     "display": "Dark Oak Pressure Plate",
@@ -3287,11 +3499,15 @@ var blocklist_1_14OLD = [
       {
         "stateName": "stage",
         "values": [
-          "0",
-          "1"
+          0,
+          1
         ],
-        "default": "0"
+        "default": 0
       }
+    ],
+    "texture_cord": [
+      18,
+      4
     ]
   },
   {
@@ -3301,24 +3517,24 @@ var blocklist_1_14OLD = [
       {
         "stateName": "rotation",
         "values": [
-          "0",
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6",
-          "7",
-          "8",
-          "9",
-          "10",
-          "11",
-          "12",
-          "13",
-          "14",
-          "15"
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
         ],
-        "default": "0"
+        "default": 0
       },
       {
         "stateName": "waterlogged",
@@ -3442,6 +3658,10 @@ var blocklist_1_14OLD = [
         ],
         "default": "false"
       }
+    ],
+    "texture_cord": [
+      18,
+      7
     ]
   },
   {
@@ -3570,24 +3790,24 @@ var blocklist_1_14OLD = [
       {
         "stateName": "power",
         "values": [
-          "0",
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6",
-          "7",
-          "8",
-          "9",
-          "10",
-          "11",
-          "12",
-          "13",
-          "14",
-          "15"
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
         ],
-        "default": "0"
+        "default": 0
       }
     ]
   },
@@ -3603,12 +3823,20 @@ var blocklist_1_14OLD = [
         ],
         "default": "false"
       }
+    ],
+    "texture_cord": [
+      21,
+      23
     ]
   },
   {
     "display": "Dead Brain Coral Block",
     "id": "dead_brain_coral_block",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      21,
+      24
+    ]
   },
   {
     "display": "Dead Brain Coral Fan",
@@ -3622,6 +3850,10 @@ var blocklist_1_14OLD = [
         ],
         "default": "false"
       }
+    ],
+    "texture_cord": [
+      21,
+      22
     ]
   },
   {
@@ -3661,12 +3893,20 @@ var blocklist_1_14OLD = [
         ],
         "default": "false"
       }
+    ],
+    "texture_cord": [
+      23,
+      23
     ]
   },
   {
     "display": "Dead Bubble Coral Block",
     "id": "dead_bubble_coral_block",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      23,
+      24
+    ]
   },
   {
     "display": "Dead Bubble Coral Fan",
@@ -3680,6 +3920,10 @@ var blocklist_1_14OLD = [
         ],
         "default": "false"
       }
+    ],
+    "texture_cord": [
+      23,
+      22
     ]
   },
   {
@@ -3724,12 +3968,20 @@ var blocklist_1_14OLD = [
         ],
         "default": "false"
       }
+    ],
+    "texture_cord": [
+      25,
+      23
     ]
   },
   {
     "display": "Dead Fire Coral Block",
     "id": "dead_fire_coral_block",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      25,
+      24
+    ]
   },
   {
     "display": "Dead Fire Coral Fan",
@@ -3743,6 +3995,10 @@ var blocklist_1_14OLD = [
         ],
         "default": "false"
       }
+    ],
+    "texture_cord": [
+      25,
+      22
     ]
   },
   {
@@ -3782,12 +4038,20 @@ var blocklist_1_14OLD = [
         ],
         "default": "false"
       }
+    ],
+    "texture_cord": [
+      27,
+      23
     ]
   },
   {
     "display": "Dead Horn Coral Block",
     "id": "dead_horn_coral_block",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      27,
+      24
+    ]
   },
   {
     "display": "Dead Horn Coral Fan",
@@ -3801,6 +4065,10 @@ var blocklist_1_14OLD = [
         ],
         "default": "false"
       }
+    ],
+    "texture_cord": [
+      27,
+      22
     ]
   },
   {
@@ -3840,12 +4108,20 @@ var blocklist_1_14OLD = [
         ],
         "default": "false"
       }
+    ],
+    "texture_cord": [
+      19,
+      23
     ]
   },
   {
     "display": "Dead Tube Coral Block",
     "id": "dead_tube_coral_block",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      19,
+      24
+    ]
   },
   {
     "display": "Dead Tube Coral Fan",
@@ -3859,6 +4135,10 @@ var blocklist_1_14OLD = [
         ],
         "default": "false"
       }
+    ],
+    "texture_cord": [
+      19,
+      22
     ]
   },
   {
@@ -3915,17 +4195,29 @@ var blocklist_1_14OLD = [
   {
     "display": "Block of Diamond",
     "id": "diamond_block",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      24,
+      16
+    ]
   },
   {
     "display": "Diamond Ore",
     "id": "diamond_ore",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      24,
+      15
+    ]
   },
   {
     "display": "Diorite",
     "id": "diorite",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      15,
+      11
+    ]
   },
   {
     "display": "Diorite Slab",
@@ -4090,24 +4382,24 @@ var blocklist_1_14OLD = [
       {
         "stateName": "rotation",
         "values": [
-          "0",
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6",
-          "7",
-          "8",
-          "9",
-          "10",
-          "11",
-          "12",
-          "13",
-          "14",
-          "15"
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
         ],
-        "default": "0"
+        "default": 0
       }
     ]
   },
@@ -4162,12 +4454,20 @@ var blocklist_1_14OLD = [
   {
     "display": "Block of Emerald",
     "id": "emerald_block",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      25,
+      16
+    ]
   },
   {
     "display": "Emerald Ore",
     "id": "emerald_ore",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      25,
+      15
+    ]
   },
   {
     "display": "Enchanting Table",
@@ -4389,16 +4689,16 @@ var blocklist_1_14OLD = [
       {
         "stateName": "moisture",
         "values": [
-          "0",
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6",
-          "7"
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
         ],
-        "default": "0"
+        "default": 0
       }
     ]
   },
@@ -4415,24 +4715,24 @@ var blocklist_1_14OLD = [
       {
         "stateName": "age",
         "values": [
-          "0",
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6",
-          "7",
-          "8",
-          "9",
-          "10",
-          "11",
-          "12",
-          "13",
-          "14",
-          "15"
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
         ],
-        "default": "0"
+        "default": 0
       },
       {
         "stateName": "east",
@@ -4488,12 +4788,20 @@ var blocklist_1_14OLD = [
         ],
         "default": "false"
       }
+    ],
+    "texture_cord": [
+      24,
+      23
     ]
   },
   {
     "display": "Fire Coral Block",
     "id": "fire_coral_block",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      24,
+      24
+    ]
   },
   {
     "display": "Fire Coral Fan",
@@ -4507,6 +4815,10 @@ var blocklist_1_14OLD = [
         ],
         "default": "false"
       }
+    ],
+    "texture_cord": [
+      24,
+      22
     ]
   },
   {
@@ -4552,12 +4864,12 @@ var blocklist_1_14OLD = [
       {
         "stateName": "age",
         "values": [
-          "0",
-          "1",
-          "2",
-          "3"
+          0,
+          1,
+          2,
+          3
         ],
-        "default": "0"
+        "default": 0
       }
     ]
   },
@@ -4644,17 +4956,29 @@ var blocklist_1_14OLD = [
   {
     "display": "Block of Gold",
     "id": "gold_block",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      23,
+      16
+    ]
   },
   {
     "display": "Gold Ore",
     "id": "gold_ore",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      23,
+      15
+    ]
   },
   {
     "display": "Granite",
     "id": "granite",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      14,
+      11
+    ]
   },
   {
     "display": "Granite Slab",
@@ -4812,24 +5136,24 @@ var blocklist_1_14OLD = [
       {
         "stateName": "rotation",
         "values": [
-          "0",
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6",
-          "7",
-          "8",
-          "9",
-          "10",
-          "11",
-          "12",
-          "13",
-          "14",
-          "15"
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
         ],
-        "default": "0"
+        "default": 0
       }
     ]
   },
@@ -4873,12 +5197,20 @@ var blocklist_1_14OLD = [
   {
     "display": "Gray Concrete Powder",
     "id": "gray_concrete_powder",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      26,
+      5
+    ]
   },
   {
     "display": "Gray Concrete",
     "id": "gray_concrete",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      26,
+      7
+    ]
   },
   {
     "display": "Gray Glazed Terracotta",
@@ -4894,6 +5226,10 @@ var blocklist_1_14OLD = [
         ],
         "default": "north"
       }
+    ],
+    "texture_cord": [
+      26,
+      13
     ]
   },
   {
@@ -4912,12 +5248,20 @@ var blocklist_1_14OLD = [
         ],
         "default": "up"
       }
+    ],
+    "texture_cord": [
+      26,
+      9
     ]
   },
   {
     "display": "Gray Stained Glass",
     "id": "gray_stained_glass",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      26,
+      1
+    ]
   },
   {
     "display": "Gray Stained Glass Pane",
@@ -4968,7 +5312,11 @@ var blocklist_1_14OLD = [
   {
     "display": "Gray Terracotta",
     "id": "gray_terracotta",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      26,
+      11
+    ]
   },
   {
     "unobtainable": "true",
@@ -4990,7 +5338,11 @@ var blocklist_1_14OLD = [
   {
     "display": "Gray Wool",
     "id": "gray_wool",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      26,
+      3
+    ]
   },
   {
     "display": "Green Banner",
@@ -4999,24 +5351,24 @@ var blocklist_1_14OLD = [
       {
         "stateName": "rotation",
         "values": [
-          "0",
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6",
-          "7",
-          "8",
-          "9",
-          "10",
-          "11",
-          "12",
-          "13",
-          "14",
-          "15"
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
         ],
-        "default": "0"
+        "default": 0
       }
     ]
   },
@@ -5060,12 +5412,20 @@ var blocklist_1_14OLD = [
   {
     "display": "Green Concrete Powder",
     "id": "green_concrete_powder",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      24,
+      6
+    ]
   },
   {
     "display": "Green Concrete",
     "id": "green_concrete",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      24,
+      8
+    ]
   },
   {
     "display": "Green Glazed Terracotta",
@@ -5081,6 +5441,10 @@ var blocklist_1_14OLD = [
         ],
         "default": "north"
       }
+    ],
+    "texture_cord": [
+      24,
+      14
     ]
   },
   {
@@ -5099,12 +5463,20 @@ var blocklist_1_14OLD = [
         ],
         "default": "up"
       }
+    ],
+    "texture_cord": [
+      24,
+      10
     ]
   },
   {
     "display": "Green Stained Glass",
     "id": "green_stained_glass",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      24,
+      2
+    ]
   },
   {
     "display": "Green Stained Glass Pane",
@@ -5155,7 +5527,11 @@ var blocklist_1_14OLD = [
   {
     "display": "Green Terracotta",
     "id": "green_terracotta",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      24,
+      12
+    ]
   },
   {
     "unobtainable": "true",
@@ -5177,7 +5553,11 @@ var blocklist_1_14OLD = [
   {
     "display": "Green Wool",
     "id": "green_wool",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      24,
+      4
+    ]
   },
   {
     "display": "Grindstone",
@@ -5226,24 +5606,24 @@ var blocklist_1_14OLD = [
       {
         "stateName": "power",
         "values": [
-          "0",
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6",
-          "7",
-          "8",
-          "9",
-          "10",
-          "11",
-          "12",
-          "13",
-          "14",
-          "15"
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
         ],
-        "default": "0"
+        "default": 0
       }
     ]
   },
@@ -5284,12 +5664,20 @@ var blocklist_1_14OLD = [
         ],
         "default": "false"
       }
+    ],
+    "texture_cord": [
+      26,
+      23
     ]
   },
   {
     "display": "Horn Coral Block",
     "id": "horn_coral_block",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      26,
+      24
+    ]
   },
   {
     "display": "Horn Coral Fan",
@@ -5303,6 +5691,10 @@ var blocklist_1_14OLD = [
         ],
         "default": "false"
       }
+    ],
+    "texture_cord": [
+      26,
+      22
     ]
   },
   {
@@ -5462,12 +5854,20 @@ var blocklist_1_14OLD = [
   {
     "display": "Block of Iron",
     "id": "iron_block",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      20,
+      16
+    ]
   },
   {
     "display": "Iron Ore",
     "id": "iron_ore",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      20,
+      15
+    ]
   },
   {
     "display": "Iron Trapdoor",
@@ -5644,6 +6044,10 @@ var blocklist_1_14OLD = [
         ],
         "default": "false"
       }
+    ],
+    "texture_cord": [
+      16,
+      6
     ]
   },
   {
@@ -5739,15 +6143,15 @@ var blocklist_1_14OLD = [
       {
         "stateName": "distance",
         "values": [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6",
-          "7"
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
         ],
-        "default": "1"
+        "default": 1
       },
       {
         "stateName": "persistent",
@@ -5757,6 +6161,10 @@ var blocklist_1_14OLD = [
         ],
         "default": "false"
       }
+    ],
+    "texture_cord": [
+      16,
+      10
     ]
   },
   {
@@ -5772,12 +6180,20 @@ var blocklist_1_14OLD = [
         ],
         "default": "y"
       }
+    ],
+    "texture_cord": [
+      16,
+      1
     ]
   },
   {
     "display": "Jungle Planks",
     "id": "jungle_planks",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      16,
+      3
+    ]
   },
   {
     "display": "Jungle Pressure Plate",
@@ -5800,11 +6216,15 @@ var blocklist_1_14OLD = [
       {
         "stateName": "stage",
         "values": [
-          "0",
-          "1"
+          0,
+          1
         ],
-        "default": "0"
+        "default": 0
       }
+    ],
+    "texture_cord": [
+      16,
+      4
     ]
   },
   {
@@ -5814,24 +6234,24 @@ var blocklist_1_14OLD = [
       {
         "stateName": "rotation",
         "values": [
-          "0",
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6",
-          "7",
-          "8",
-          "9",
-          "10",
-          "11",
-          "12",
-          "13",
-          "14",
-          "15"
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
         ],
-        "default": "0"
+        "default": 0
       },
       {
         "stateName": "waterlogged",
@@ -5955,6 +6375,10 @@ var blocklist_1_14OLD = [
         ],
         "default": "false"
       }
+    ],
+    "texture_cord": [
+      16,
+      7
     ]
   },
   {
@@ -6004,34 +6428,34 @@ var blocklist_1_14OLD = [
       {
         "stateName": "age",
         "values": [
-          "0",
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6",
-          "7",
-          "8",
-          "9",
-          "10",
-          "11",
-          "12",
-          "13",
-          "14",
-          "15",
-          "16",
-          "17",
-          "18",
-          "19",
-          "20",
-          "21",
-          "22",
-          "23",
-          "24",
-          "25"
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25
         ],
-        "default": "0"
+        "default": 0
       }
     ]
   },
@@ -6082,12 +6506,20 @@ var blocklist_1_14OLD = [
   {
     "display": "Lapis Lazuli Block",
     "id": "lapis_block",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      22,
+      16
+    ]
   },
   {
     "display": "Lapis Lazuli Ore",
     "id": "lapis_ore",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      22,
+      15
+    ]
   },
   {
     "display": "Large Fern",
@@ -6110,24 +6542,24 @@ var blocklist_1_14OLD = [
       {
         "stateName": "level",
         "values": [
-          "0",
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6",
-          "7",
-          "8",
-          "9",
-          "10",
-          "11",
-          "12",
-          "13",
-          "14",
-          "15"
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
         ],
-        "default": "0"
+        "default": 0
       }
     ]
   },
@@ -6213,24 +6645,24 @@ var blocklist_1_14OLD = [
       {
         "stateName": "rotation",
         "values": [
-          "0",
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6",
-          "7",
-          "8",
-          "9",
-          "10",
-          "11",
-          "12",
-          "13",
-          "14",
-          "15"
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
         ],
-        "default": "0"
+        "default": 0
       }
     ]
   },
@@ -6274,12 +6706,20 @@ var blocklist_1_14OLD = [
   {
     "display": "Light Blue Concrete Powder",
     "id": "light_blue_concrete_powder",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      22,
+      5
+    ]
   },
   {
     "display": "Light Blue Concrete",
     "id": "light_blue_concrete",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      22,
+      7
+    ]
   },
   {
     "display": "Light Blue Glazed Terracotta",
@@ -6295,6 +6735,10 @@ var blocklist_1_14OLD = [
         ],
         "default": "north"
       }
+    ],
+    "texture_cord": [
+      22,
+      13
     ]
   },
   {
@@ -6313,12 +6757,20 @@ var blocklist_1_14OLD = [
         ],
         "default": "up"
       }
+    ],
+    "texture_cord": [
+      22,
+      9
     ]
   },
   {
     "display": "Light Blue Stained Glass",
     "id": "light_blue_stained_glass",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      22,
+      1
+    ]
   },
   {
     "display": "Light Blue Stained Glass Pane",
@@ -6369,7 +6821,11 @@ var blocklist_1_14OLD = [
   {
     "display": "Light Blue Terracotta",
     "id": "light_blue_terracotta",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      22,
+      11
+    ]
   },
   {
     "unobtainable": "true",
@@ -6391,7 +6847,11 @@ var blocklist_1_14OLD = [
   {
     "display": "Light Blue Wool",
     "id": "light_blue_wool",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      22,
+      3
+    ]
   },
   {
     "display": "Light Gray Banner",
@@ -6400,24 +6860,24 @@ var blocklist_1_14OLD = [
       {
         "stateName": "rotation",
         "values": [
-          "0",
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6",
-          "7",
-          "8",
-          "9",
-          "10",
-          "11",
-          "12",
-          "13",
-          "14",
-          "15"
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
         ],
-        "default": "0"
+        "default": 0
       }
     ]
   },
@@ -6461,12 +6921,20 @@ var blocklist_1_14OLD = [
   {
     "display": "Light Gray Concrete Powder",
     "id": "light_gray_concrete_powder",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      19,
+      6
+    ]
   },
   {
     "display": "Light Gray Concrete",
     "id": "light_gray_concrete",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      19,
+      8
+    ]
   },
   {
     "display": "Light Gray Glazed Terracotta",
@@ -6482,6 +6950,10 @@ var blocklist_1_14OLD = [
         ],
         "default": "north"
       }
+    ],
+    "texture_cord": [
+      19,
+      14
     ]
   },
   {
@@ -6500,12 +6972,20 @@ var blocklist_1_14OLD = [
         ],
         "default": "up"
       }
+    ],
+    "texture_cord": [
+      19,
+      10
     ]
   },
   {
     "display": "Light Gray Stained Glass",
     "id": "light_gray_stained_glass",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      19,
+      2
+    ]
   },
   {
     "display": "Light Gray Stained Glass Pane",
@@ -6556,7 +7036,11 @@ var blocklist_1_14OLD = [
   {
     "display": "Light Gray Terracotta",
     "id": "light_gray_terracotta",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      19,
+      12
+    ]
   },
   {
     "unobtainable": "true",
@@ -6578,7 +7062,11 @@ var blocklist_1_14OLD = [
   {
     "display": "Light Gray Wool",
     "id": "light_gray_wool",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      19,
+      4
+    ]
   },
   {
     "display": "Light Weighted Pressure Plate",
@@ -6587,24 +7075,24 @@ var blocklist_1_14OLD = [
       {
         "stateName": "power",
         "values": [
-          "0",
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6",
-          "7",
-          "8",
-          "9",
-          "10",
-          "11",
-          "12",
-          "13",
-          "14",
-          "15"
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
         ],
-        "default": "0"
+        "default": 0
       }
     ]
   },
@@ -6639,24 +7127,24 @@ var blocklist_1_14OLD = [
       {
         "stateName": "rotation",
         "values": [
-          "0",
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6",
-          "7",
-          "8",
-          "9",
-          "10",
-          "11",
-          "12",
-          "13",
-          "14",
-          "15"
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
         ],
-        "default": "0"
+        "default": 0
       }
     ]
   },
@@ -6700,12 +7188,20 @@ var blocklist_1_14OLD = [
   {
     "display": "Lime Concrete Powder",
     "id": "lime_concrete_powder",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      24,
+      5
+    ]
   },
   {
     "display": "Lime Concrete",
     "id": "lime_concrete",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      24,
+      7
+    ]
   },
   {
     "display": "Lime Glazed Terracotta",
@@ -6721,6 +7217,10 @@ var blocklist_1_14OLD = [
         ],
         "default": "north"
       }
+    ],
+    "texture_cord": [
+      24,
+      13
     ]
   },
   {
@@ -6739,12 +7239,20 @@ var blocklist_1_14OLD = [
         ],
         "default": "up"
       }
+    ],
+    "texture_cord": [
+      24,
+      9
     ]
   },
   {
     "display": "Lime Stained Glass",
     "id": "lime_stained_glass",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      24,
+      1
+    ]
   },
   {
     "display": "Lime Stained Glass Pane",
@@ -6795,7 +7303,11 @@ var blocklist_1_14OLD = [
   {
     "display": "Lime Terracotta",
     "id": "lime_terracotta",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      24,
+      11
+    ]
   },
   {
     "unobtainable": "true",
@@ -6817,7 +7329,11 @@ var blocklist_1_14OLD = [
   {
     "display": "Lime Wool",
     "id": "lime_wool",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      24,
+      3
+    ]
   },
   {
     "display": "Loom",
@@ -6842,24 +7358,24 @@ var blocklist_1_14OLD = [
       {
         "stateName": "rotation",
         "values": [
-          "0",
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6",
-          "7",
-          "8",
-          "9",
-          "10",
-          "11",
-          "12",
-          "13",
-          "14",
-          "15"
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
         ],
-        "default": "0"
+        "default": 0
       }
     ]
   },
@@ -6903,12 +7419,20 @@ var blocklist_1_14OLD = [
   {
     "display": "Magenta Concrete Powder",
     "id": "magenta_concrete_powder",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      21,
+      5
+    ]
   },
   {
     "display": "Magenta Concrete",
     "id": "magenta_concrete",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      21,
+      7
+    ]
   },
   {
     "display": "Magenta Glazed Terracotta",
@@ -6924,6 +7448,10 @@ var blocklist_1_14OLD = [
         ],
         "default": "north"
       }
+    ],
+    "texture_cord": [
+      21,
+      13
     ]
   },
   {
@@ -6942,12 +7470,20 @@ var blocklist_1_14OLD = [
         ],
         "default": "up"
       }
+    ],
+    "texture_cord": [
+      21,
+      9
     ]
   },
   {
     "display": "Magenta Stained Glass",
     "id": "magenta_stained_glass",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      21,
+      1
+    ]
   },
   {
     "display": "Magenta Stained Glass Pane",
@@ -6998,7 +7534,11 @@ var blocklist_1_14OLD = [
   {
     "display": "Magenta Terracotta",
     "id": "magenta_terracotta",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      21,
+      11
+    ]
   },
   {
     "unobtainable": "true",
@@ -7020,7 +7560,11 @@ var blocklist_1_14OLD = [
   {
     "display": "Magenta Wool",
     "id": "magenta_wool",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      21,
+      3
+    ]
   },
   {
     "display": "Magma Block",
@@ -7040,16 +7584,16 @@ var blocklist_1_14OLD = [
       {
         "stateName": "age",
         "values": [
-          "0",
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6",
-          "7"
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
         ],
-        "default": "0"
+        "default": 0
       }
     ]
   },
@@ -7600,12 +8144,12 @@ var blocklist_1_14OLD = [
       {
         "stateName": "age",
         "values": [
-          "0",
-          "1",
-          "2",
-          "3"
+          0,
+          1,
+          2,
+          3
         ],
-        "default": "0"
+        "default": 0
       }
     ]
   },
@@ -7638,33 +8182,33 @@ var blocklist_1_14OLD = [
       {
         "stateName": "note",
         "values": [
-          "0",
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6",
-          "7",
-          "8",
-          "9",
-          "10",
-          "11",
-          "12",
-          "13",
-          "14",
-          "15",
-          "16",
-          "17",
-          "18",
-          "19",
-          "20",
-          "21",
-          "22",
-          "23",
-          "24"
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
         ],
-        "default": "0"
+        "default": 0
       },
       {
         "stateName": "powered",
@@ -7755,6 +8299,10 @@ var blocklist_1_14OLD = [
         ],
         "default": "false"
       }
+    ],
+    "texture_cord": [
+      13,
+      6
     ]
   },
   {
@@ -7850,15 +8398,15 @@ var blocklist_1_14OLD = [
       {
         "stateName": "distance",
         "values": [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6",
-          "7"
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
         ],
-        "default": "1"
+        "default": 1
       },
       {
         "stateName": "persistent",
@@ -7868,6 +8416,10 @@ var blocklist_1_14OLD = [
         ],
         "default": "false"
       }
+    ],
+    "texture_cord": [
+      13,
+      10
     ]
   },
   {
@@ -7883,12 +8435,20 @@ var blocklist_1_14OLD = [
         ],
         "default": "y"
       }
+    ],
+    "texture_cord": [
+      13,
+      1
     ]
   },
   {
     "display": "Oak Planks",
     "id": "oak_planks",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      13,
+      3
+    ]
   },
   {
     "display": "Oak Pressure Plate",
@@ -7911,11 +8471,15 @@ var blocklist_1_14OLD = [
       {
         "stateName": "stage",
         "values": [
-          "0",
-          "1"
+          0,
+          1
         ],
-        "default": "0"
+        "default": 0
       }
+    ],
+    "texture_cord": [
+      13,
+      4
     ]
   },
   {
@@ -8035,6 +8599,10 @@ var blocklist_1_14OLD = [
         ],
         "default": "false"
       }
+    ],
+    "texture_cord": [
+      13,
+      7
     ]
   },
   {
@@ -8111,24 +8679,24 @@ var blocklist_1_14OLD = [
       {
         "stateName": "rotation",
         "values": [
-          "0",
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6",
-          "7",
-          "8",
-          "9",
-          "10",
-          "11",
-          "12",
-          "13",
-          "14",
-          "15"
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
         ],
-        "default": "0"
+        "default": 0
       }
     ]
   },
@@ -8172,12 +8740,20 @@ var blocklist_1_14OLD = [
   {
     "display": "Orange Concrete Powder",
     "id": "orange_concrete_powder",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      20,
+      5
+    ]
   },
   {
     "display": "Orange Concrete",
     "id": "orange_concrete",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      20,
+      7
+    ]
   },
   {
     "display": "Orange Glazed Terracotta",
@@ -8193,6 +8769,10 @@ var blocklist_1_14OLD = [
         ],
         "default": "north"
       }
+    ],
+    "texture_cord": [
+      20,
+      13
     ]
   },
   {
@@ -8211,12 +8791,20 @@ var blocklist_1_14OLD = [
         ],
         "default": "up"
       }
+    ],
+    "texture_cord": [
+      20,
+      9
     ]
   },
   {
     "display": "Orange Stained Glass",
     "id": "orange_stained_glass",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      20,
+      1
+    ]
   },
   {
     "display": "Orange Stained Glass Pane",
@@ -8267,7 +8855,11 @@ var blocklist_1_14OLD = [
   {
     "display": "Orange Terracotta",
     "id": "orange_terracotta",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      20,
+      11
+    ]
   },
   {
     "display": "Orange Tulip",
@@ -8294,7 +8886,11 @@ var blocklist_1_14OLD = [
   {
     "display": "Orange Wool",
     "id": "orange_wool",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      20,
+      3
+    ]
   },
   {
     "display": "Oxeye Daisy",
@@ -8350,24 +8946,24 @@ var blocklist_1_14OLD = [
       {
         "stateName": "rotation",
         "values": [
-          "0",
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6",
-          "7",
-          "8",
-          "9",
-          "10",
-          "11",
-          "12",
-          "13",
-          "14",
-          "15"
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
         ],
-        "default": "0"
+        "default": 0
       }
     ]
   },
@@ -8411,12 +9007,20 @@ var blocklist_1_14OLD = [
   {
     "display": "Pink Concrete Powder",
     "id": "pink_concrete_powder",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      25,
+      5
+    ]
   },
   {
     "display": "Pink Concrete",
     "id": "pink_concrete",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      25,
+      7
+    ]
   },
   {
     "display": "Pink Glazed Terracotta",
@@ -8432,6 +9036,10 @@ var blocklist_1_14OLD = [
         ],
         "default": "north"
       }
+    ],
+    "texture_cord": [
+      25,
+      13
     ]
   },
   {
@@ -8450,12 +9058,20 @@ var blocklist_1_14OLD = [
         ],
         "default": "up"
       }
+    ],
+    "texture_cord": [
+      25,
+      9
     ]
   },
   {
     "display": "Pink Stained Glass",
     "id": "pink_stained_glass",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      25,
+      1
+    ]
   },
   {
     "display": "Pink Stained Glass Pane",
@@ -8506,7 +9122,11 @@ var blocklist_1_14OLD = [
   {
     "display": "Pink Terracotta",
     "id": "pink_terracotta",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      25,
+      11
+    ]
   },
   {
     "display": "Pink Tulip",
@@ -8533,7 +9153,11 @@ var blocklist_1_14OLD = [
   {
     "display": "Pink Wool",
     "id": "pink_wool",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      25,
+      3
+    ]
   },
   {
     "display": "Piston Head",
@@ -8602,24 +9226,24 @@ var blocklist_1_14OLD = [
       {
         "stateName": "rotation",
         "values": [
-          "0",
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6",
-          "7",
-          "8",
-          "9",
-          "10",
-          "11",
-          "12",
-          "13",
-          "14",
-          "15"
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
         ],
-        "default": "0"
+        "default": 0
       }
     ]
   },
@@ -8880,16 +9504,16 @@ var blocklist_1_14OLD = [
       {
         "stateName": "age",
         "values": [
-          "0",
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6",
-          "7"
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
         ],
-        "default": "0"
+        "default": 0
       }
     ]
   },
@@ -9278,16 +9902,16 @@ var blocklist_1_14OLD = [
       {
         "stateName": "age",
         "values": [
-          "0",
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6",
-          "7"
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
         ],
-        "default": "0"
+        "default": 0
       }
     ]
   },
@@ -9298,24 +9922,24 @@ var blocklist_1_14OLD = [
       {
         "stateName": "rotation",
         "values": [
-          "0",
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6",
-          "7",
-          "8",
-          "9",
-          "10",
-          "11",
-          "12",
-          "13",
-          "14",
-          "15"
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
         ],
-        "default": "0"
+        "default": 0
       }
     ]
   },
@@ -9359,12 +9983,20 @@ var blocklist_1_14OLD = [
   {
     "display": "Purple Concrete Powder",
     "id": "purple_concrete_powder",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      21,
+      6
+    ]
   },
   {
     "display": "Purple Concrete",
     "id": "purple_concrete",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      21,
+      8
+    ]
   },
   {
     "display": "Purple Glazed Terracotta",
@@ -9380,6 +10012,10 @@ var blocklist_1_14OLD = [
         ],
         "default": "north"
       }
+    ],
+    "texture_cord": [
+      21,
+      14
     ]
   },
   {
@@ -9398,12 +10034,20 @@ var blocklist_1_14OLD = [
         ],
         "default": "up"
       }
+    ],
+    "texture_cord": [
+      21,
+      10
     ]
   },
   {
     "display": "Purple Stained Glass",
     "id": "purple_stained_glass",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      21,
+      2
+    ]
   },
   {
     "display": "Purple Stained Glass Pane",
@@ -9454,7 +10098,11 @@ var blocklist_1_14OLD = [
   {
     "display": "Purple Terracotta",
     "id": "purple_terracotta",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      21,
+      12
+    ]
   },
   {
     "unobtainable": "true",
@@ -9476,7 +10124,11 @@ var blocklist_1_14OLD = [
   {
     "display": "Purple Wool",
     "id": "purple_wool",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      21,
+      4
+    ]
   },
   {
     "display": "Purpur Block",
@@ -9679,24 +10331,24 @@ var blocklist_1_14OLD = [
       {
         "stateName": "rotation",
         "values": [
-          "0",
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6",
-          "7",
-          "8",
-          "9",
-          "10",
-          "11",
-          "12",
-          "13",
-          "14",
-          "15"
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
         ],
-        "default": "0"
+        "default": 0
       }
     ]
   },
@@ -9740,12 +10392,20 @@ var blocklist_1_14OLD = [
   {
     "display": "Red Concrete Powder",
     "id": "red_concrete_powder",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      25,
+      6
+    ]
   },
   {
     "display": "Red Concrete",
     "id": "red_concrete",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      25,
+      8
+    ]
   },
   {
     "display": "Red Glazed Terracotta",
@@ -9761,6 +10421,10 @@ var blocklist_1_14OLD = [
         ],
         "default": "north"
       }
+    ],
+    "texture_cord": [
+      25,
+      14
     ]
   },
   {
@@ -10093,12 +10757,20 @@ var blocklist_1_14OLD = [
         ],
         "default": "up"
       }
+    ],
+    "texture_cord": [
+      25,
+      10
     ]
   },
   {
     "display": "Red Stained Glass",
     "id": "red_stained_glass",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      25,
+      2
+    ]
   },
   {
     "display": "Red Stained Glass Pane",
@@ -10149,7 +10821,11 @@ var blocklist_1_14OLD = [
   {
     "display": "Red Terracotta",
     "id": "red_terracotta",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      25,
+      12
+    ]
   },
   {
     "display": "Red Tulip",
@@ -10176,12 +10852,20 @@ var blocklist_1_14OLD = [
   {
     "display": "Red Wool",
     "id": "red_wool",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      25,
+      4
+    ]
   },
   {
     "display": "Block of Redstone",
     "id": "redstone_block",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      21,
+      16
+    ]
   },
   {
     "display": "Redstone Lamp",
@@ -10209,6 +10893,10 @@ var blocklist_1_14OLD = [
         ],
         "default": "false"
       }
+    ],
+    "texture_cord": [
+      21,
+      15
     ]
   },
   {
@@ -10275,24 +10963,24 @@ var blocklist_1_14OLD = [
       {
         "stateName": "power",
         "values": [
-          "0",
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6",
-          "7",
-          "8",
-          "9",
-          "10",
-          "11",
-          "12",
-          "13",
-          "14",
-          "15"
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
         ],
-        "default": "0"
+        "default": 0
       },
       {
         "stateName": "south",
@@ -10321,12 +11009,12 @@ var blocklist_1_14OLD = [
       {
         "stateName": "delay",
         "values": [
-          "1",
-          "2",
-          "3",
-          "4"
+          1,
+          2,
+          3,
+          4
         ],
-        "default": "1"
+        "default": 1
       },
       {
         "stateName": "facing",
@@ -10541,16 +11229,16 @@ var blocklist_1_14OLD = [
       {
         "stateName": "distance",
         "values": [
-          "0",
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6",
-          "7"
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
         ],
-        "default": "0"
+        "default": 0
       },
       {
         "stateName": "waterlogged",
@@ -10574,12 +11262,12 @@ var blocklist_1_14OLD = [
       {
         "stateName": "pickles",
         "values": [
-          "1",
-          "2",
-          "3",
-          "4"
+          1,
+          2,
+          3,
+          4
         ],
-        "default": "1"
+        "default": 1
       },
       {
         "stateName": "waterlogged",
@@ -10621,24 +11309,24 @@ var blocklist_1_14OLD = [
       {
         "stateName": "rotation",
         "values": [
-          "0",
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6",
-          "7",
-          "8",
-          "9",
-          "10",
-          "11",
-          "12",
-          "13",
-          "14",
-          "15"
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
         ],
-        "default": "0"
+        "default": 0
       }
     ]
   },
@@ -10928,16 +11616,16 @@ var blocklist_1_14OLD = [
       {
         "stateName": "layers",
         "values": [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6",
-          "7",
-          "8"
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
         ],
-        "default": "1"
+        "default": 1
       }
     ]
   },
@@ -11035,6 +11723,10 @@ var blocklist_1_14OLD = [
         ],
         "default": "false"
       }
+    ],
+    "texture_cord": [
+      14,
+      6
     ]
   },
   {
@@ -11130,15 +11822,15 @@ var blocklist_1_14OLD = [
       {
         "stateName": "distance",
         "values": [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6",
-          "7"
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
         ],
-        "default": "1"
+        "default": 1
       },
       {
         "stateName": "persistent",
@@ -11148,6 +11840,10 @@ var blocklist_1_14OLD = [
         ],
         "default": "false"
       }
+    ],
+    "texture_cord": [
+      14,
+      10
     ]
   },
   {
@@ -11163,12 +11859,20 @@ var blocklist_1_14OLD = [
         ],
         "default": "y"
       }
+    ],
+    "texture_cord": [
+      14,
+      1
     ]
   },
   {
     "display": "Spruce Planks",
     "id": "spruce_planks",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      14,
+      3
+    ]
   },
   {
     "display": "Spruce Pressure Plate",
@@ -11191,11 +11895,15 @@ var blocklist_1_14OLD = [
       {
         "stateName": "stage",
         "values": [
-          "0",
-          "1"
+          0,
+          1
         ],
-        "default": "0"
+        "default": 0
       }
+    ],
+    "texture_cord": [
+      14,
+      4
     ]
   },
   {
@@ -11205,24 +11913,24 @@ var blocklist_1_14OLD = [
       {
         "stateName": "rotation",
         "values": [
-          "0",
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6",
-          "7",
-          "8",
-          "9",
-          "10",
-          "11",
-          "12",
-          "13",
-          "14",
-          "15"
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
         ],
-        "default": "0"
+        "default": 0
       },
       {
         "stateName": "waterlogged",
@@ -11346,6 +12054,10 @@ var blocklist_1_14OLD = [
         ],
         "default": "false"
       }
+    ],
+    "texture_cord": [
+      14,
+      7
     ]
   },
   {
@@ -11417,7 +12129,11 @@ var blocklist_1_14OLD = [
   {
     "display": "Stone",
     "id": "stone",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      13,
+      11
+    ]
   },
   {
     "display": "Stone Brick Slab",
@@ -11898,24 +12614,24 @@ var blocklist_1_14OLD = [
       {
         "stateName": "age",
         "values": [
-          "0",
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6",
-          "7",
-          "8",
-          "9",
-          "10",
-          "11",
-          "12",
-          "13",
-          "14",
-          "15"
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
         ],
-        "default": "0"
+        "default": 0
       }
     ]
   },
@@ -11941,12 +12657,12 @@ var blocklist_1_14OLD = [
       {
         "stateName": "age",
         "values": [
-          "0",
-          "1",
-          "2",
-          "3"
+          0,
+          1,
+          2,
+          3
         ],
-        "default": "0"
+        "default": 0
       }
     ]
   },
@@ -12142,12 +12858,20 @@ var blocklist_1_14OLD = [
         ],
         "default": "false"
       }
+    ],
+    "texture_cord": [
+      18,
+      23
     ]
   },
   {
     "display": "Tube Coral Block",
     "id": "tube_coral_block",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      18,
+      24
+    ]
   },
   {
     "display": "Tube Coral Fan",
@@ -12161,6 +12885,10 @@ var blocklist_1_14OLD = [
         ],
         "default": "false"
       }
+    ],
+    "texture_cord": [
+      18,
+      22
     ]
   },
   {
@@ -12195,21 +12923,21 @@ var blocklist_1_14OLD = [
       {
         "stateName": "eggs",
         "values": [
-          "1",
-          "2",
-          "3",
-          "4"
+          1,
+          2,
+          3,
+          4
         ],
-        "default": "1"
+        "default": 1
       },
       {
         "stateName": "hatch",
         "values": [
-          "0",
-          "1",
-          "2"
+          0,
+          1,
+          2
         ],
-        "default": "0"
+        "default": 0
       }
     ]
   },
@@ -12289,24 +13017,24 @@ var blocklist_1_14OLD = [
       {
         "stateName": "level",
         "values": [
-          "0",
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6",
-          "7",
-          "8",
-          "9",
-          "10",
-          "11",
-          "12",
-          "13",
-          "14",
-          "15"
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
         ],
-        "default": "0"
+        "default": 0
       }
     ]
   },
@@ -12328,24 +13056,24 @@ var blocklist_1_14OLD = [
       {
         "stateName": "rotation",
         "values": [
-          "0",
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6",
-          "7",
-          "8",
-          "9",
-          "10",
-          "11",
-          "12",
-          "13",
-          "14",
-          "15"
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
         ],
-        "default": "0"
+        "default": 0
       }
     ]
   },
@@ -12389,12 +13117,20 @@ var blocklist_1_14OLD = [
   {
     "display": "White Concrete Powder",
     "id": "white_concrete_powder",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      19,
+      5
+    ]
   },
   {
     "display": "White Concrete",
     "id": "white_concrete",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      19,
+      7
+    ]
   },
   {
     "display": "White Glazed Terracotta",
@@ -12410,6 +13146,10 @@ var blocklist_1_14OLD = [
         ],
         "default": "north"
       }
+    ],
+    "texture_cord": [
+      19,
+      13
     ]
   },
   {
@@ -12428,12 +13168,20 @@ var blocklist_1_14OLD = [
         ],
         "default": "up"
       }
+    ],
+    "texture_cord": [
+      19,
+      9
     ]
   },
   {
     "display": "White Stained Glass",
     "id": "white_stained_glass",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      19,
+      1
+    ]
   },
   {
     "display": "White Stained Glass Pane",
@@ -12484,7 +13232,11 @@ var blocklist_1_14OLD = [
   {
     "display": "White Terracotta",
     "id": "white_terracotta",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      19,
+      11
+    ]
   },
   {
     "display": "White Tulip",
@@ -12511,7 +13263,11 @@ var blocklist_1_14OLD = [
   {
     "display": "White Wool",
     "id": "white_wool",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      19,
+      3
+    ]
   },
   {
     "display": "Wither Rose",
@@ -12525,24 +13281,24 @@ var blocklist_1_14OLD = [
       {
         "stateName": "rotation",
         "values": [
-          "0",
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6",
-          "7",
-          "8",
-          "9",
-          "10",
-          "11",
-          "12",
-          "13",
-          "14",
-          "15"
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
         ],
-        "default": "0"
+        "default": 0
       }
     ]
   },
@@ -12570,24 +13326,24 @@ var blocklist_1_14OLD = [
       {
         "stateName": "rotation",
         "values": [
-          "0",
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6",
-          "7",
-          "8",
-          "9",
-          "10",
-          "11",
-          "12",
-          "13",
-          "14",
-          "15"
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
         ],
-        "default": "0"
+        "default": 0
       }
     ]
   },
@@ -12631,12 +13387,20 @@ var blocklist_1_14OLD = [
   {
     "display": "Yellow Concrete Powder",
     "id": "yellow_concrete_powder",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      23,
+      5
+    ]
   },
   {
     "display": "Yellow Concrete",
     "id": "yellow_concrete",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      23,
+      7
+    ]
   },
   {
     "display": "Yellow Glazed Terracotta",
@@ -12652,6 +13416,10 @@ var blocklist_1_14OLD = [
         ],
         "default": "north"
       }
+    ],
+    "texture_cord": [
+      23,
+      13
     ]
   },
   {
@@ -12670,12 +13438,20 @@ var blocklist_1_14OLD = [
         ],
         "default": "up"
       }
+    ],
+    "texture_cord": [
+      23,
+      9
     ]
   },
   {
     "display": "Yellow Stained Glass",
     "id": "yellow_stained_glass",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      23,
+      1
+    ]
   },
   {
     "display": "Yellow Stained Glass Pane",
@@ -12726,7 +13502,11 @@ var blocklist_1_14OLD = [
   {
     "display": "Yellow Terracotta",
     "id": "yellow_terracotta",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      23,
+      11
+    ]
   },
   {
     "unobtainable": "true",
@@ -12748,7 +13528,11 @@ var blocklist_1_14OLD = [
   {
     "display": "Yellow Wool",
     "id": "yellow_wool",
-    "states": []
+    "states": [],
+    "texture_cord": [
+      23,
+      3
+    ]
   },
   {
     "display": "Zombie Head",
@@ -12757,24 +13541,24 @@ var blocklist_1_14OLD = [
       {
         "stateName": "rotation",
         "values": [
-          "0",
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6",
-          "7",
-          "8",
-          "9",
-          "10",
-          "11",
-          "12",
-          "13",
-          "14",
-          "15"
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
         ],
-        "default": "0"
+        "default": 0
       }
     ]
   },

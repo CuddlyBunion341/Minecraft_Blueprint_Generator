@@ -12,5 +12,6 @@ img,canvas {
 }
 #canvas_holder {
   position: relative;
+  background-color: white;
   /*top:100px*/
 }

@@ -1,5 +1,5 @@
 var GridObject = {
-  version:"1.12",
+  version:"1.14",
   showtext: 0,
   x_size: 8,
   current_y: 0,

@@ -37,35 +37,20 @@ function renderCell(cell_index) {
         var id = block
         var idm = 0
       }
-      /*var texture = document.createElement("img") //new Image()
-      texture.src = 'image-files/1.12/top.png'
-      texture.style.imageRendering = 'pixelated'*/
-     //console.log(texture);
-      //ctx.drawImage(texture,16 * idm,16 *  id,16,16,)
-      //ctx.drawImage(texture,16 * idm, 16 * id,16,16,0,0,size,size)
-      //ctx.fillStyle = 'red'                                          //debug (sets fillcolor to red to be used below\/)
-      //ctx.fillRect(x * clf + lw,z * clf + lw,clf - lw,clf - lw)      //debug (fills square with red color /\)
-      //ctx.drawImage(texture,16 * idm, 16 * id,16,16,)
       ctx.fillStyle = "#FFFFFF"
       //ctx.fillRect(x * clf + lw,z * clf + lw,clf - 2 * lw,clf - 2 * lw)
-
-      /*if (texture.complete) {
-       //console.log("LOADED :)");
-        ctx.drawImage(texture,16 * idm,16 * id,16,16,x * clf + lw,z * clf + lw,clf - lw,clf - lw)
-      } else {
-       //console.log("not LOADED :(");
-        texture.onload = function () {
-          ctx.drawImage(texture,16 * idm,16 * id,16,16,x * clf + lw,z * clf + lw,clf - lw,clf - lw)
-        };
-      }*/
-      //ctx.drawImage(texture,16 * idm,16 * id,16,16,x * clf + lw,z * clf + lw,clf - lw,clf - lw) /////efuvy7ejdhufy4r3hui
       ctx.drawImage(texture,16 * idm,16 * id,16,16,x * clf + lw,z * clf + lw,clf - lw,Math.round(clf - lw))
       //ctx.drawImage(texture,16 * idm,16 * id,16,16,x * clf,z * clf,clf,clf)
       //ctx.drawImage(texture,16 * idm, 16 * id,16,16,clf * x + GridObject.translate_x + size / (100 / lw),clf * z + GridObject.translate_z + size / (100 / lw),size - (size / (100 / lw)) * 2,size - (size / (100 / lw)) * 2)
       // works but not aligning with renderGrid's 'Grid'
     }
     else if (GridObject.version == '1.14') {
-
+      var tc = getTextureCord(block)
+      //console.log(tc,block,tc[0],tc[1],texture1_14,x * clf);
+      ctx.fillStyle = "#FFFFFF"
+      //console.log(texture1_14,16 * tc[0],16 * tc[1],16,16,x * clf + lw,z * clf + lw,clf - lw,Math.round(clf - lw));
+      //ctx.fillRect(x * clf + lw,z * clf + lw,clf - 2 * lw,clf - 2 * lw)
+      ctx.drawImage(texture1_14,16 * tc[0],16 * tc[1],16,16,x * clf + lw,z * clf + lw,clf - lw,Math.round(clf - lw))
     }
   }
   if (GridObject.selected.includes(cell_index)) {

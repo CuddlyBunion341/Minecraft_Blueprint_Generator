@@ -1,6 +1,24 @@
 function cellcord(x,y,z) {
   return "c" + x + "x" + y + "x" + z
 }
+function getFromArr(arr,testValue,testProperty,getProperty) {
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i][testProperty] == testValue) {
+      if (arr[i][getProperty]) {
+        return arr[i][getProperty]
+      }
+      else {
+        return false
+      }
+    }
+  }
+}
+function getTextureCord(id) {
+  if (getFromArr(blocklist_1_14,id,"id","texture_cord")) {
+    return getFromArr(blocklist_1_14,id,"id","texture_cord")
+  }
+  return [-16,-16]
+}
 function mtc(clf,sw,rw,mx,my,y) { //mtc => mouse to cord
   ratio = sw / rw
   var x = Math.floor(mx * ratio / clf + ((GridObject.translate_x / clf) - (GridObject.translate_x / clf) * 2))

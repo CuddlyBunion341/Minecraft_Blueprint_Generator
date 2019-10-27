@@ -13,7 +13,7 @@ function setup() {
   GraphicsCanvas.style.height = "500px";
   GraphicsCanvas.style.imageRendering = "pixelated";
   GraphicsCanvas.getContext('2d').imageSmoothingEnabled = false;
-  var imagesToLoad = ['image-files/1.12/top.png',]
+  var imagesToLoad = ['image-files/1.12/top.png','image-files/1.14/1.14.png']
   var div = document.createElement('div')
   div.id = 'imageHolder'
   div.style.display = 'none'
@@ -29,13 +29,24 @@ function setup() {
     var vers = document.getElementById('vers-select').value
     ChangeVersion(vers)
   })
-  GridObject.Cells["c2x0x1"] = {block:"1"}
-  GridObject.Cells["c2x0x2"] = {block:"1:1"}
-  GridObject.Cells["c2x0x3"] = {block:"1:2"}
+  if (GridObject.version == "1.12") {
+    GridObject.Cells["c2x0x1"] = {block:"1"}
+    GridObject.Cells["c2x0x2"] = {block:"1:1"}
+    GridObject.Cells["c2x0x3"] = {block:"1:2"}
 
-  GridObject.Cells["c1x1x1"] = {block:"2"}
-  GridObject.Cells["c2x1x1"] = {block:"2"}
-  GridObject.Cells["c4x1x4"] = {block:"3"}
+    GridObject.Cells["c1x1x1"] = {block:"2"}
+    GridObject.Cells["c2x1x1"] = {block:"2"}
+    GridObject.Cells["c4x1x4"] = {block:"3"}
+  }
+  else if (GridObject.version == "1.14") {
+    GridObject.Cells["c2x0x1"] = {block:"stone"}
+    GridObject.Cells["c2x0x2"] = {block:"stone"}
+    GridObject.Cells["c2x0x3"] = {block:"stone"}
+
+    GridObject.Cells["c1x1x1"] = {block:"tube_coral_block"}
+    GridObject.Cells["c2x1x1"] = {block:"fire_coral_block"}
+    GridObject.Cells["c4x1x4"] = {block:"brain_coral_block"}
+  }
   storeAction()
   setTimeout(function () {
     document.getElementById('imageHolder').parentNode.removeChild(document.getElementById('imageHolder'))
@@ -87,7 +98,10 @@ function initCanvasVar() {
   window.texture = document.createElement("img") //new Image()
   window.texture.src = 'image-files/1.12/top.png'
   window.texture.style.imageRendering = 'pixelated'
-  window.texture.onload = function () {
+  window.texture1_14 = document.createElement("img") //new Image()
+  window.texture1_14.src = 'image-files/1.14/1.14.png'
+  window.texture1_14.style.imageRendering = 'pixelated'
+  window.texture1_14.onload = function () {
     renderLayer(GridObject.current_y,true)
   };
 }
@@ -107,5 +121,5 @@ window.onload = function(){
   initToolEvents()
   prepareSelect()
   updateGlobalVar()
-  fillUl(blocklist_1_12)
+  fillUl()
 }

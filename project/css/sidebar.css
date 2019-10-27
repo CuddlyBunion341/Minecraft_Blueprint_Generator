@@ -10,13 +10,19 @@
   border: 1px solid black;
   margin: 2px;
   float: left;
-  background-image: url(../image-files/1.12/top.png );
-  background-size: 768px 12288px;
   image-rendering: pixelated;
   width: 48px;
   height: 48px;
   background-repeat: no-repeat;
   /* position: absolute; */
+}
+.v1_12 {
+  background-image: url(../image-files/1.12/top.png );
+  background-size: 768px 12288px;
+}
+.v1_14 {
+  background-image: url(../image-files/1.14/1.14.png );
+  background-size: 1536px 1536px;
 }
 #block_ul {
     width: 100%;
