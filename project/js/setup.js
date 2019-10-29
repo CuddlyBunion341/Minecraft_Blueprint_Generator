@@ -114,6 +114,17 @@ function updateGlobalVar() {
   window.size = GridObject.zoom * GridObject.defaultsize
   window.lw = GridObject.lineWidth
   window.clf = size - lw * 2
+  Object.getPrototypeOf(ctx).nsr=function(x,y,w,h) {
+    this.lineWidth = Math.round(this.lineWidth)
+    if (this.lineWidth/2 == Math.floor(this.lineWidth/2)) {
+      this.strokeRect(Math.round(x),Math.round(y),Math.round(w),Math.round(h))
+      console.log(Math.round(x),Math.round(y),Math.round(w),Math.round(h));
+    }
+    else {
+      this.strokeRect(Math.round(x) + 0.5,Math.round(y) + 0.5,Math.round(w),Math.round(h))
+      console.log(Math.round(x) + 0.5,Math.round(y) + 0.5,Math.round(w),Math.round(h));
+    }
+  }
 }
 window.onload = function(){
   setup();
