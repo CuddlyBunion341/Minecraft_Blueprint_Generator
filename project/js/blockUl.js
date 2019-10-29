@@ -97,12 +97,20 @@ function prepUl() {
     var y = e.clientY
     var tt = document.getElementById('tooltip')
     var bounding = tt.getBoundingClientRect();
-    tt.style.left = e.clientX - bounding.width - 20 + "px"
-    tt.style.top = e.clientY - bounding.height / 2 + "px"
+    if (tt.style.opacity == 1) {
+      tt.style.left = e.clientX - bounding.width - 20 + "px"
+      tt.style.top = e.clientY - bounding.height / 2 + "px"
+    }
+  })
+  document.getElementById('tooltip').addEventListener('transitionend', function(e) {
+    if (this.style.opacity == 0) {
+      this.style.display = 'none'
+    }
   })
   document.getElementById('block_ul').addEventListener('mouseenter',function(e) {
     var tt = document.getElementById('tooltip')
     tt.style.opacity = 1
+    tt.style.display = 'block'
   })
   document.getElementById('block_ul').addEventListener('mouseleave',function(e) {
     var tt = document.getElementById('tooltip')
@@ -147,5 +155,5 @@ function rename(display,id,base) {
     b_el.style.textShadow = '2px 2px #141314'
     tt.appendChild(b_el)
     return;
-  }
-}//<div id="tooltip" style="display: block; left: 500px; top: -15px; opacity: 0;"><div style="text-shadow: rgb(65, 62, 64) 2px 2px;">Polished Andesite (#0001/6)</div><div style="color: rgb(89, 86, 89); text-shadow: rgb(20, 19, 20) 2px 2px;">(minecraft:stone)</div></div>
+  }}
+  //<div id="tooltip" style="display: block; left: 500px; top: -15px; opacity: 0;"><div style="text-shadow: rgb(65, 62, 64) 2px 2px;">Polished Andesite (#0001/6)</div><div style="color: rgb(89, 86, 89); text-shadow: rgb(20, 19, 20) 2px 2px;">(minecraft:stone)</div></div>
