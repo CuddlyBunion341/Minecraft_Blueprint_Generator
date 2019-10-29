@@ -113,8 +113,10 @@ function renderGrid(width,height,dl) {
   var clf = size - lw * 2
   for (var w = 0; w < width; w++) {
     for (var h = 0; h < height; h++) {
+      var wc = w
+      var hc = h
       //ctx.strokeRect(w * clf + lw * 0.5,h * clf + lw * 0.5,clf,clf) //Worked
-      ctx.strokeRect(w * clf + lw * 0.5,h * clf + lw * 0.5,clf,Math.round(clf));//debug
+      ctx.nsr(w * clf + lw * 0.5,h * clf + lw * 0.5,clf,clf);//debug
     }
   }
 }
