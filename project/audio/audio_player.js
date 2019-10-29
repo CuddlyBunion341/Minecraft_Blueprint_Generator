@@ -4,32 +4,51 @@ var AudioObject = {
   pitch:1,
   volume:1,
 }
+String.prototype.isOneOf = function (arr) {
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i] == this) {
+      return true
+    }
+  }
+  return false;
+};
+String.prototype.includesAnyOf = function (arr) {
+  for (var i = 0; i < arr.length; i++) {
+    if (this.includes(arr[i])) {
+      return true
+    }
+  }
+  return false;
+};
 function getSound(block) {
-  if (block.includes('wool') || block.includes('carpet') || block == "cake" || block == "cactus") {
+  if (block.includesAnyOf(['wool','carpet']) || block.isOneOf(["cake","cactus"])) {
     return 'cloth';
   }
-  if (block.includes('grass') || block.includes('shroom') || block.includes('sapling') || block.includes('leav') || block.includes('flower')) {
+  if (block.includesAnyOf(['grass','shroom','sapling','leav','flower'])) {
     return 'grass';
   }
-  if (block.includes('dirt') || block == "podzol" || block == "gravel" || block == "clay" || block == "mycelium") {
+  if (block.includesAnyOf(['dirt']) || block.isOneOf(["podzol","gravel","clay","mycelium"])) {
     return 'gravel';
   }
-  if (block.includes('sand') || block.includes('concrete_powder')) {
+  if (block.includesAnyOf(['sand','concrete_powder'])) {
     return 'sand';
   }
-  if (block.includes('snow')) {
+  if (block.includesAnyOf(['snow'])) {
     return 'snow';
   }
-  if (block.includes('plank') || block.includes('wood') || block.includes('log') || block.includes('acacia') || block.includes('oak') || block.includes('birch') || block.includes('spruce') || block.includes('jungle')) {
+  if (block.includesAnyOf(['plank','wood','log','acacia','oak','birch','spruce','jungle'])) {
     return 'wood';
+  }
+  if (block.includesAnyOf(["rail","hopper"]) || block.isOneOf(["gold_block","iron_block","diamond_block","emerald_block","iron_door","iron_trapdoor"])) {
+    return 'metal'
   }
   return 'stone'
 }
-function playBlockSound(block = "snow",crazy = false) {
+function playBlockSound(block = "stone",crazy = false) {
   if (AudioObject.allowAudio) {
     var numbers = ["1","2","3","4"]
     if (crazy) {
-      var crazy = ["cloth","grass","gravel","sand","snow","stone","wood"]
+      var crazy = ["cloth","grass","gravel","sand","snow","stone","wood","metal"]
       var block = crazy[Math.floor(Math.random()*crazy.length)];
     }
     var pre;
@@ -51,6 +70,8 @@ function playBlockSound(block = "snow",crazy = false) {
         pre = "snow/snow"
         break;
         case "stone":
+        pre = "stone/stone"
+        case "metal":
         pre = "stone/stone"
         break
         case "wood":
