@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="texture_mapper.js" charset="utf-8"></script>
+    <script src="Blocklist14WBlockstates.js" charset="utf-8"></script>
+    <script src="Blocklist14New.js" charset="utf-8"></script>
+    <script src="blockCordAdder.js" charset="utf-8"></script>
+    <style media="screen">
+      html {
+        image-rendering: pixelated;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      .cell {
+        box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,0.5);
+        position: absolute;
+        z-Index:999;
+      }
+      .cell:hover {
+        background-color: rgba(0,0,255,1)
+      }
+      .cell:active {
+        background-color: rgba(255,0,0,1)
+      }
+      .hidden {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        pointer-events: none;
+        opacity: 0;
+        transform: scale(0);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="holder">
+      <img src="NewImages.png">
+    </div>
+    <div id="Output">
+      <span id="ct">Block x out of y</span>
+      <br>
+      <span>Block:</span><span id="bd">Dirt</span>
+      <br>
+      <span>JSONcode:</span><span id="bc">{display:"dirt"}</span>
+      <br>
+      <span>Selected Cell: </span><span id="crd">10/5</span>
+      <br>
+      <span>Apply[enter], None[delete] log[esc]</span>
+      <br>
+      <textarea name="name" rows="8" cols="80" id="teta"></textarea>
+      <br>
+      <label>Skip To:</label><input type="number" value="5" id='ii'></input><button type="button" name="button" onclick="ci()">JUMP</button>
+      <input class="hidden"></input>
+    </div>
+  </body>
+</html>
