@@ -121,8 +121,8 @@ function updateGlobalVar() {
       console.log(Math.round(x),Math.round(y),Math.round(w),Math.round(h));
     }
     else {
-      this.strokeRect(Math.round(x) + 0.5,Math.round(y) + 0.5,Math.round(w),Math.round(h))
-      console.log(Math.round(x) + 0.5,Math.round(y) + 0.5,Math.round(w),Math.round(h));
+      this.strokeRect(Math.round(x) + 0.5,Math.round(y) + 0.5,Math.round(w) + 0.5,Math.round(h) + 0.5)
+      console.log(Math.round(x) + 0.5,Math.round(y) + 0.5,Math.round(w) + 0.5,Math.round(h) + 0.5);
     }
   }
 }

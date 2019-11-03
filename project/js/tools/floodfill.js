@@ -3,7 +3,6 @@ function floodfill() {
     //var block = document.getElementById('material_select').value
 		var block = getMaterial()
     var paper = getBlock(cord)
-    console.log(cord);
     floodfillF(cord,paper,block)
     storeAction()
     playBlockSound(getSound(block))
