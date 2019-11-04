@@ -1,4 +1,4 @@
-var blocklist_1_14_old = [
+var bl14 = [
   {
     "display": "Acacia Button",
     "id": "acacia_button",

@@ -18,7 +18,8 @@ var patterns = {
   infested:["stone","cobblestone","stone_bricks","mossy_stone_bricks","cracked_stone_bricks","chiseled_stone_bricks"],
   anvil:['',"chipped","damaged"],
   stone_st_and_sl:["polished_granite","smooth_red_sandstone","mossy_stone_brick","polished_diorite","mossy_cobblestone","end_stone_brick","stone","smooth_sandstone","smooth_quartz","granite","andesite","red_nether_brick","polished_andesite","diorite"],
-  head:["skeleton","wither_skeleton","player","zombie","creeper","ender_dragon"],
+  skull:["skeleton","wither_skeleton"],
+  head:["player","zombie","creeper","dragon"],
 }
 var ids = []
 var currentId = 0 //0 //0
@@ -35,8 +36,7 @@ function addBlock(block=undefined,ap=true) {
     document.write(str)
   }
   var id_obj = {block:block,id:currentId}
-  console.log(id_obj);
-  ids.push(id_obj)
+    ids.push(id_obj)
   currentId++
   if (ap) {
     var str = "+" + "-".repeat(limitToId - 1) + "+" + "-".repeat(limitToLineBreak - limitToId - 1) + "+"
@@ -104,7 +104,7 @@ function sort() {
   addPattern(patterns.mushroom,'mushroom')
   addPattern(["gold","iron"],'block')
   addPattern(patterns.wood,'slab')
-  addPattern(["stone","smooth_stone","sandstone","cut_sandstone","petrified_oak","cobblestone","brick","nether_brick","quartz","red_sandstone","cut_red_sandstone","purpur","prismarine","prismarine_brick","dark_prismarine"],'block')
+  addPattern(["stone","smooth_stone","sandstone","cut_sandstone","petrified_oak","cobblestone","brick","nether_brick","quartz","red_sandstone","cut_red_sandstone","purpur","prismarine","prismarine_brick","dark_prismarine"],"slab")
   addPattern(patterns.smooth,'smooth',"r")
   addBlock('bricks')
   addBlock('tnt')
@@ -147,7 +147,7 @@ function sort() {
   addBlock("soulsand")
   addBlock("glowstone")
   addBlock("jack_o_lantern")
-  addPattern(patterns.wood,"trap_door")
+  addPattern(patterns.wood,"trapdoor")
   addPattern(patterns.infested,"infested","r")
   addPattern(patterns.infested,"","n",2)
   addPattern(patterns.mushroom,"mushroom_block")
@@ -236,10 +236,16 @@ function sort() {
   addBlock("comparator")
   addBlock("composter")
   addPattern(patterns.wood,"sign")
+  addBlock("beetroots")
   addBlock("dried_kelp_block")
+  addBlock("bamboo_sapling")
+  addBlock("cake")
   addPattern(patterns.color,"bed")
   addBlock("brewing_stand")
   addBlock("cauldron")
+  addBlock("carrots")
+  addBlock("potatos")
+  addPattern(patterns.skull,"skull")
   addPattern(patterns.head,"head")
   addPattern(patterns.color,"banner")
   addBlock("loom")
@@ -254,6 +260,42 @@ function sort() {
   addBlock("stonecutter")
   addBlock("bell")
   addBlock("lantern")
-  addBlock("camp_fire")
+  addBlock("campfire")
+  setTimeout(mergeIDs, 1000);
 }
 window.onload = sort()
+var nfc = 0
+var nfa = []
+function mergeIDs() {
+  var biggest_id = 0
+  for (var bi = 0; bi < ids.length; bi++) {
+    if (ids[bi].id > biggest_id) {
+      biggest_id = ids[bi].id
+    }
+  }
+  for (var b = 0; b < bl14.length; b++) {
+    for (var i = 0; i < ids.length; i++) {
+      if (bl14[b].id == ids[i].block) {
+        console.log("found",ids[i].block);
+        bl14[b].numeric_id = ids[i].id
+        break;
+      }
+      if (i + 1 == ids.length) {
+        console.warn("NOT FOUND:",bl14[b].id);
+        biggest_id++
+        bl14[b].numeric_id = biggest_id
+        nfc++
+        nfa.push(bl14[b].id)
+      }
+    }
+  }
+  console.log(nfc);
+  console.log(nfa);
+}
+function sortMerged() {
+  var sortById = bl14.sort(function (a, b)
+    {
+      return parseFloat(a.numeric_id) - parseFloat(b.numeric_id);
+    });
+    console.log(sortById);
+}
