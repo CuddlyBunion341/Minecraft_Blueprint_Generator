@@ -7,7 +7,7 @@ var GridObject = {
   zoom: 2.6,
   translate_x:0,
   translate_z:0,
-  defaultsize: 80,
+  defaultsize: 80, //80
   spacefactor: -1, //4
   lineWidth: 3.25,
   lineWidth_selected:2,

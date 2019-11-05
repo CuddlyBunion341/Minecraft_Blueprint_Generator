@@ -5,22 +5,22 @@ function renderCell(cell_index) {
   var y = cell_index.split('x')[1]
   var z = cell_index.split('x')[2]
   var size = GridObject.zoom * GridObject.defaultsize;
-  if (GridObject.spacefactor == -1) {
-    var clf = size
+  /*if (GridObject.spacefactor == -1) {
+    var clf = Math.floor(size)
   }
   else {
-    var clf = size + size / GridObject.spacefactor;
-  }
+    var clf = Math.floor(size + size / GridObject.spacefactor);
+  }*/
   var canvas = document.getElementById('Gridvisulator');
   var ctx = canvas.getContext('2d');
   ctx.globalCompositeOperation = "source-over"
   var lw = GridObject.lineWidth;
-  lw = size / (100 / lw)      //lw = size / (100 / lw)
+  lw = Math.floor(size / (100 / lw))      //lw = size / (100 / lw)
   ctx.lineWidth = lw
-  var clf = size - lw * 2
+  var clf = Math.floor(size - lw * 2)
   var combinedRender = false
   if (!combinedRender) {
-    ctx.clearRect(x * clf + lw,z * clf + lw,clf - lw,clf - lw)
+    ctx.clearRect(Math.floor(x * clf + lw),Math.floor(z * clf + lw),clf - lw,clf - lw)
     //ctx.fillStyle = "#FFFFFF"
     //ctx.fillRect(x * clf + lw,z * clf + lw,clf - lw,clf - lw)
   }
@@ -39,7 +39,7 @@ function renderCell(cell_index) {
       }
       ctx.fillStyle = "#FFFFFF"
       //ctx.fillRect(x * clf + lw,z * clf + lw,clf - 2 * lw,clf - 2 * lw)
-      ctx.drawImage(texture,16 * idm,16 * id,16,16,x * clf + lw,z * clf + lw,clf - lw,Math.round(clf - lw))
+      ctx.drawImage(texture,16 * idm,16 * id,16,16,Math.floor(x * clf + lw),Math.floor(z * clf + lw),clf - lw,clf - lw)
       //ctx.drawImage(texture,16 * idm,16 * id,16,16,x * clf,z * clf,clf,clf)
       //ctx.drawImage(texture,16 * idm, 16 * id,16,16,clf * x + GridObject.translate_x + size / (100 / lw),clf * z + GridObject.translate_z + size / (100 / lw),size - (size / (100 / lw)) * 2,size - (size / (100 / lw)) * 2)
       // works but not aligning with renderGrid's 'Grid'
@@ -50,7 +50,8 @@ function renderCell(cell_index) {
       ctx.fillStyle = "#FFFFFF"
       //console.log(texture1_14,16 * tc[0],16 * tc[1],16,16,x * clf + lw,z * clf + lw,clf - lw,Math.round(clf - lw));
       //ctx.fillRect(x * clf + lw,z * clf + lw,clf - 2 * lw,clf - 2 * lw)
-      ctx.drawImage(texture1_14,16 * tc[0],16 * tc[1],16,16,x * clf + lw,z * clf + lw,clf - lw,Math.round(clf - lw))
+      //ctx.drawImage(texture,16 * idm,16 * id,16,16,Math.floor(x * clf + lw),Math.floor(z * clf + lw),clf - lw,clf - lw)
+      ctx.drawImage(texture1_14,16 * tc[0],16 * tc[1],16,16,Math.floor(x * clf + lw),Math.floor(z * clf + lw) + 0.5,clf - lw + 0.5,clf - lw)
     }
   }
   if (GridObject.selected.includes(cell_index)) {
@@ -108,15 +109,22 @@ function renderGrid(width,height,dl) {
   }
   var size = GridObject.zoom * GridObject.defaultsize
   var lw = GridObject.lineWidth
-  lw = size / (100 / lw)      //lw = size / (100 / lw)
+  lw = Math.floor(size / (100 / lw))      //lw = size / (100 / lw)
   ctx.lineWidth = lw
-  var clf = size - lw * 2
+  var clf = Math.floor(size - lw * 2)
   for (var w = 0; w < width; w++) {
     for (var h = 0; h < height; h++) {
       var wc = w
       var hc = h
       //ctx.strokeRect(w * clf + lw * 0.5,h * clf + lw * 0.5,clf,clf) //Worked
-      ctx.nsr(w * clf + lw * 0.5,h * clf + lw * 0.5,clf,clf);//debug
+      //ctx.nsr(w * clf + lw * 0.5,h * clf + lw * 0.5,clf,clf);//debug
+      if (lw / 2 == Math.floor(lw / 2)) { // if lw is even, then
+        ctx.strokeRect(Math.floor(w * clf + lw / 2) + 0.5,Math.floor(h * clf + lw / 2) + 0.5,clf,clf)
+        console.log("x:",w,"y:",h,"clf:",clf,"lw:",lw,"FLOOREDLW",Math.floor(lw),"width:",Math.floor(clf),"c" + w + "x" + 0 + "x" + h,"XPos:",Math.floor(w * clf + lw / 2),"YPos:",Math.floor(h * clf + lw / 2))
+      }
+      else { //odd
+        ctx.strokeRect(Math.floor(w * clf + lw / 2) + 0.5,Math.floor(h * clf + lw / 2) + 0.5,clf,clf)
+      }
     }
   }
 }

@@ -1,16 +1,16 @@
 function setup() {
   var GridCanvas = document.getElementById('Gridvisulator')
   var GraphicsCanvas = document.getElementById('Graphicsvisulator')
-  GridCanvas.height = 2100;//2100
-  GridCanvas.width = 2100;
-  GridCanvas.style.width = "500px";
-  GridCanvas.style.height = "500px";
+  GridCanvas.height = 2048;//2100
+  GridCanvas.width = 2048;
+  GridCanvas.style.width = "512px";
+  GridCanvas.style.height = "512px";
   GridCanvas.style.imageRendering = "pixelated";
   GridCanvas.getContext('2d').imageSmoothingEnabled = false;
-  GraphicsCanvas.height = 2100;
-  GraphicsCanvas.width = 2100;
-  GraphicsCanvas.style.width = "500px";
-  GraphicsCanvas.style.height = "500px";
+  GraphicsCanvas.height = 2048;
+  GraphicsCanvas.width = 2048;
+  GraphicsCanvas.style.width = "512px";
+  GraphicsCanvas.style.height = "512px";
   GraphicsCanvas.style.imageRendering = "pixelated";
   GraphicsCanvas.getContext('2d').imageSmoothingEnabled = false;
   var imagesToLoad = ['image-files/1.12/top.png','image-files/1.14/1.14.png']
@@ -102,7 +102,10 @@ function initCanvasVar() {
   window.texture1_14.src = 'image-files/1.14/1.14.png'
   window.texture1_14.style.imageRendering = 'pixelated'
   window.texture1_14.onload = function () {
-    renderLayer(GridObject.current_y,true)
+    //renderLayer(GridObject.current_y,true)
+    renderGrid(8,8,GridObject.current_y,true)
+    //ctx.lineWidth = 6
+    //ctx.strokeRect(3.5,3.5,196,196)
   };
 }
 function prepareSelect() {
