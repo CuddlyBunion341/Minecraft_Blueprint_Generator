@@ -42,8 +42,10 @@ function dragStart(e) {
     var ctx = canvas.getContext('2d')
     var sw = canvas.width
     var rw = parseInt(canvas.style.width.split("px")[0])
-    var mx = e.clientX - ctx.canvas.offsetLeft
-    var my = e.clientY - ctx.canvas.offsetTop
+    /*var mx = e.clientX - ctx.canvas.offsetLeft
+    var my = e.clientY - ctx.canvas.offsetTop*/
+    var mx = e.clientX - canvas.getBoundingClientRect().left
+    var my = e.clientY - canvas.getBoundingClientRect().top
     //clf,sw,rw,mx,my,y
     var ratio = sw / rw
     var mxC = mx * ratio
@@ -61,19 +63,6 @@ function dragStart(e) {
     cord = mtc(clf,sw,rw,mx,my,GridObject.current_y)
     ctx.fillStyle = "#FF6600"
     ctx.font = "30px Arial";
-    //ctx.fillText(cord, mxC - 15, myC);
-    //GridObject.Cells[cord] = {block: cl.toString()}// dd
-    /*if (cl == 1) {
-      cl = 2
-    }
-    else {
-      cl = 1
-    }
-    renderCell(cord)// dd*/
-    //ctx.fillRect(mxC - w/2,myC - w/2,w,w)
-    //console.log(mx,my,ratio,mxC,myC);
-    //document.getElementById('debug').innerHTML = cord;
-    //console.log(cord);
     x = parseInt(cord.split("x")[0].split("c")[1])
     z = parseInt(cord.split("x")[2])
     if (x.toString().length == 1) {
@@ -85,8 +74,9 @@ function dragStart(e) {
     ctx.fillStyle = "#" + x.toString(10) + "00" + z.toString(10)
     //console.log(ctx.fillStyle);
     var s = 50
-    var mx = e.clientX - ctx.canvas.offsetLeft
-    var my = e.clientY - ctx.canvas.offsetTop
+    /* var mx = e.clientX - ctx.canvas.offsetLeft
+    var my = e.clientY - ctx.canvas.offsetTop*/
+
     var sw = canvas.width
     var rw = parseInt(canvas.style.width.split("px")[0])
     //ctx.fillRect((mx * (sw / rw)),(my * (sw / rw)),s,s)

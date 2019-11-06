@@ -83,8 +83,8 @@
   /*border: 3px solid blue;*/
   position: relative;
   z-index:9;
-  /*box-shadow: inset 0 0px 0px 30px rgba(0,0,255,0.5);*/
-  filter:invert();
+  box-shadow: inset 0 0px 0px 30px rgba(0,0,255,0.5);
+  /*filter:invert();*/
   /*transform: translate(4px,-8px);*/
 }
 .selected::after {
@@ -113,7 +113,7 @@
     padding: 4px 10px;
     color: #fff;
     /* display: none; */
-    font-family: 'minecraft';
+    font-family: 'MinecraftiaRegular';
     font-size: 16px;
     font-weight: normal;
     transition: opacity 0.3s;
