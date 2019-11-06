@@ -103,7 +103,8 @@ function initCanvasVar() {
   window.texture1_14.style.imageRendering = 'pixelated'
   window.texture1_14.onload = function () {
     //renderLayer(GridObject.current_y,true)
-    renderGrid(8,8,GridObject.current_y,true)
+    setWidth(8)
+    //renderGrid(8,8,GridObject.current_y,true)
     //ctx.lineWidth = 6
     //ctx.strokeRect(3.5,3.5,196,196)
   };

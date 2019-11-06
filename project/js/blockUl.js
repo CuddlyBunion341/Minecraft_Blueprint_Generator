@@ -57,8 +57,8 @@ function fillUl() {
         selectElement(this,e.altKey,e.shiftKey)
       });
       added_e.addEventListener('mouseenter',function (e) {
-        rename(this.dataset.display,this.dataset.id,this.dataset.base);
-      })
+        rename(this.dataset.display,this.dataset.id,this.dataset.base,e);
+      },false)
       added_e.addEventListener('mouseleave',function (e) {
       })
       if (i == 0) {
@@ -117,19 +117,16 @@ function prepUl() {
     tt.style.opacity = 0
   })
 }
-function rename(display,id,base) {
+function rename(display,id,base,e) {
   if (GridObject.version == "1.12") {
     var tt = document.getElementById('tooltip')
-    while (tt.firstChild) {
-      tt.removeChild(tt.firstChild);
-    }
     if (id.includes(':')) {
       idc = id.replace(':','/')
     }
     else {
       idc = id + '/' + 0
     }
-    var d_el = document.createElement("div")
+    /*var d_el = document.createElement("div")
     d_el.innerHTML = display + ' (' + textFusion('#0000',idc.split('/')[0]) + '/' + idc.split('/')[1] + ')'
     d_el.style.textShadow = '2px 2px #413E40'
     tt.appendChild(d_el)
@@ -137,23 +134,26 @@ function rename(display,id,base) {
     b_el.innerHTML = base
     b_el.style.color = '#595659'
     b_el.style.textShadow = '2px 2px #141314'
-    tt.appendChild(b_el)
+    tt.appendChild(b_el)*/
+    var d_el = document.getElementById("d_el")
+    d_el.innerHTML = display + ' (' + textFusion('#0000',idc.split('/')[0]) + '/' + idc.split('/')[1] + ')'
+    var b_el = document.getElementById("b_el")
+    b_el.innerHTML = base
+    var bounding = tt.getBoundingClientRect();
+    tt.style.left = e.pageX - bounding.width - 20 + "px"
+    tt.style.top = e.pageY - bounding.height / 2 + "px"
+    return;
     return;
   }
   if (GridObject.version == "1.14") {
     var tt = document.getElementById('tooltip')
-    while (tt.firstChild) {
-      tt.removeChild(tt.firstChild);
-    }
-    var d_el = document.createElement("div")
+    var d_el = document.getElementById("d_el")
     d_el.innerHTML = display
-    d_el.style.textShadow = '2px 2px #413E40'
-    tt.appendChild(d_el)
-    var b_el = document.createElement("div")
+    var b_el = document.getElementById("b_el")
     b_el.innerHTML = base
-    b_el.style.color = '#595659'
-    b_el.style.textShadow = '2px 2px #141314'
-    tt.appendChild(b_el)
+    var bounding = tt.getBoundingClientRect();
+    tt.style.left = e.clientX - bounding.width - 20 + "px"
+    tt.style.top = e.clientY - bounding.height / 2 + "px"
     return;
   }}
   //<div id="tooltip" style="display: block; left: 500px; top: -15px; opacity: 0;"><div style="text-shadow: rgb(65, 62, 64) 2px 2px;">Polished Andesite (#0001/6)</div><div style="color: rgb(89, 86, 89); text-shadow: rgb(20, 19, 20) 2px 2px;">(minecraft:stone)</div></div>

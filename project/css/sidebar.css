@@ -108,3 +108,10 @@
 .visuallyhidden {
   opacity: 0;
 }
+#d_el {
+  text-shadow:2px 2px #413E40
+}
+#b_el{
+  color:#595659;
+  text-shadow:2px 2px #141314;
+}

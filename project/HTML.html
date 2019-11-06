@@ -49,7 +49,7 @@
         <div id='block_ul'></div>
       </div>
       <div id='main_render'>
-        <div id="debug"></div>
+        <div id="debug">c0x0x0</div>
         <select id="brush_select">
           <option value="brush">Brush</option>
           <option value="rect_select">Rectangle Selection</option>
@@ -57,17 +57,15 @@
           <option value="rect_draw">Rectangle draw</option>
           <option value="line">Line</option>
         </select>
-        <select id="material_select">
-          <option value="2">Grass</option>
-          <option value="1">stone</option>
-          <option value="20">glass</option>
-          <option value="0">air</option>
-        </select>
         <input type="number" value=0 onchange="GridObject.current_y = this.value; renderLayer(GridObject.current_y,true)"></input>
+        <input type="number" value=8 onchange="setWidth(parseInt(this.value))"></input>
         <br>
         <canvas id="Graphicsvisulator" width="300" height="300"></canvas>
         <canvas id="Gridvisulator" width="300" height="300"></canvas>
-        <div id="tooltip"></div>
+        <div id="tooltip">
+          <div id="d_el"></div>
+          <div id="b_el"></div>
+        </div>
       </div>
     <!--</div>-->
   </body>

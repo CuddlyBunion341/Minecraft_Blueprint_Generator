@@ -15,7 +15,7 @@ function renderCell(cell_index) {
   var ctx = canvas.getContext('2d');
   ctx.globalCompositeOperation = "source-over"
   var lw = GridObject.lineWidth;
-  lw = Math.floor(size / (100 / lw))      //lw = size / (100 / lw)
+  lw = Math.floor((size / (100 / lw)) / 2) * 2      //lw = size / (100 / lw)
   ctx.lineWidth = lw
   var clf = Math.floor(size - lw * 2)
   var combinedRender = false
@@ -109,9 +109,10 @@ function renderGrid(width,height,dl) {
   }
   var size = GridObject.zoom * GridObject.defaultsize
   var lw = GridObject.lineWidth
-  lw = Math.floor(size / (100 / lw))      //lw = size / (100 / lw)
+  lw = Math.floor((size / (100 / lw)) / 2) * 2      //lw = size / (100 / lw)
   ctx.lineWidth = lw
   var clf = Math.floor(size - lw * 2)
+  console.log("////////////////",width,"x",height);
   for (var w = 0; w < width; w++) {
     for (var h = 0; h < height; h++) {
       var wc = w
@@ -120,13 +121,20 @@ function renderGrid(width,height,dl) {
       //ctx.nsr(w * clf + lw * 0.5,h * clf + lw * 0.5,clf,clf);//debug
       if (lw / 2 == Math.floor(lw / 2)) { // if lw is even, then
         ctx.strokeRect(Math.floor(w * clf + lw / 2) + 0.5,Math.floor(h * clf + lw / 2) + 0.5,clf,clf)
-        console.log("x:",w,"y:",h,"clf:",clf,"lw:",lw,"FLOOREDLW",Math.floor(lw),"width:",Math.floor(clf),"c" + w + "x" + 0 + "x" + h,"XPos:",Math.floor(w * clf + lw / 2),"YPos:",Math.floor(h * clf + lw / 2))
+        console.log("even",lw);
+        //console.log("x:",w,"y:",h,"clf:",clf,"lw:",lw,"FLOOREDLW",Math.floor(lw),"width:",Math.floor(clf),"c" + w + "x" + 0 + "x" + h,"XPos:",Math.floor(w * clf + lw / 2)  + 0.5,"YPos:",Math.floor(h * clf + lw / 2)  + 0.5)
       }
       else { //odd
-        ctx.strokeRect(Math.floor(w * clf + lw / 2) + 0.5,Math.floor(h * clf + lw / 2) + 0.5,clf,clf)
+        console.log("odd",lw);
+        ctx.strokeRect(Math.floor(w * clf + lw / 2),Math.floor(h * clf + lw / 2) + 0.5,clf,clf)
       }
     }
   }
+}
+function setWidth(w) {
+  GridObject.x_size = w
+  GridObject.z_size = w
+  AutoZoom()
 }
 function AutoZoom() {
   GridObject.zoom = ZoomCalc()
