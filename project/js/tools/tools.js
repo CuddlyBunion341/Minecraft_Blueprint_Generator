@@ -115,8 +115,13 @@ function drag(e) {
 }
 function dragStop(e) {
   if (toolObj.wasOverCanvas) {
+    var size = GridObject.zoom * GridObject.defaultsize
+    var lw = GridObject.lineWidth
+    lw = size / (100 / lw)      //lw = size / (100 / lw)
+    ctx.lineWidth = lw
+    var clf = Math.floor(size - lw * 2)
     toolObj.ccl = getCanvasMousePos(e) //canvas curent location
-    calc(toolObj.dsl,toolObj.ccl,false,false)
+    calc(toolObj.dsl,toolObj.ccl,false,false,[clf,sw,rw])
     var zro = {x:0,y:0}
     renderRect(zro,zro,false,false)
   }
