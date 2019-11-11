@@ -21,10 +21,13 @@ String.prototype.includesAnyOf = function (arr) {
   return false;
 };
 function getSound(block) {
+  if (GridObject.version == "1.12") {
+    block = getFromArr(blocklist_1_12,block.replace(":","/"),"id","display").toLowerCase()
+  }
   if (block.includesAnyOf(['wool','carpet']) || block.isOneOf(["cake","cactus"])) {
     return 'cloth';
   }
-  if (block.includesAnyOf(['grass','shroom','sapling','leav','flower'])) {
+  if (block.includesAnyOf(['grass','shroom','sapling','leav','flower','tnt'])) {
     return 'grass';
   }
   if (block.includesAnyOf(['dirt']) || block.isOneOf(["podzol","gravel","clay","mycelium"])) {
@@ -88,9 +91,16 @@ function playBlockSound(block = "stone",crazy = false) {
   }
 }
 function playAnySound(sound_path,volume = 1,play_back_speed = 1) {
-  var a = new Audio();
-  a.src = sound_path
-  a.playbackRate = play_back_speed
-  a.volume = volume
-  a.play()
+  try {
+    var a = new Audio();
+    a.src = sound_path
+    a.playbackRate = play_back_speed
+    a.volume = volume
+    a.play()
+  } catch (e) {
+    console.log(e);
+    return
+  } finally {
+    return
+  }
 }
