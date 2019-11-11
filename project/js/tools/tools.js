@@ -57,7 +57,7 @@ function dragStart(e) {
     var lw = GridObject.lineWidth
     lw = size / (100 / lw)      //lw = size / (100 / lw)
     ctx.lineWidth = lw
-    var clf = size - lw * 2
+    var clf = Math.floor(size - lw * 2)
     ///////////////////////////////////////////
     w = 100
     cord = mtc(clf,sw,rw,mx,my,GridObject.current_y)
@@ -93,7 +93,7 @@ function drag(e) {
     var lw = GridObject.lineWidth
     lw = size / (100 / lw)      //lw = size / (100 / lw)
     ctx.lineWidth = lw
-    var clf = size - lw * 2
+    var clf = Math.floor(size - lw * 2)
     /////////
     //var clf = GridObject.defaultsize * GridObject.zoom //ctx.canvas.offsetLeft
     var sw = canvas.width
@@ -132,7 +132,7 @@ function fillscr() {
   var lw = GridObject.lineWidth
   lw = size / (100 / lw)      //lw = size / (100 / lw)
   ctx.lineWidth = lw
-  var clf = size - lw * 2
+  var clf = Math.floor(size - lw * 2)
   for (var i = 0; i < 2100; i++) {
     for (var a = 0; a < 2100; a++) {
       cord = mtc(clf,sw,rw,i,a,GridObject.current_y)
@@ -155,8 +155,10 @@ function fillscr() {
   }
 }
 function getCanvasMousePos(e) {
-  var x = e.clientX - ctx.canvas.offsetLeft
-  var y = e.clientY - ctx.canvas.offsetTop
+  /*var x = e.clientX - ctx.canvas.offsetLeft
+  var y = e.clientY - ctx.canvas.offsetTop*/
+  var x = e.clientX - canvas.getBoundingClientRect().left
+  var y = e.clientY - canvas.getBoundingClientRect().top
   return {x:x,y:y}
 }
 function Redraw(liwi,d1) {
