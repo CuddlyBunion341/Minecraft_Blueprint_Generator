@@ -30,7 +30,7 @@ function fillUl() {
       added_e.addEventListener('mouseleave',function (e) {
       })
       if (i == 1) {
-        selectElement(added_e)
+        selectElement(added_e,true)
       }
     }
     return;
@@ -61,7 +61,7 @@ function fillUl() {
       },false)
       added_e.addEventListener('mouseleave',function (e) {
       })
-      if (i == 0) {
+      if (i == 1) {
         selectElement(added_e,true)
       }
     }
@@ -156,4 +156,50 @@ function rename(display,id,base,e) {
     tt.style.top = e.clientY - bounding.height / 2 + "px"
     return;
   }}
-  //<div id="tooltip" style="display: block; left: 500px; top: -15px; opacity: 0;"><div style="text-shadow: rgb(65, 62, 64) 2px 2px;">Polished Andesite (#0001/6)</div><div style="color: rgb(89, 86, 89); text-shadow: rgb(20, 19, 20) 2px 2px;">(minecraft:stone)</div></div>
+function filter(value,list) {
+  var shortcut = {
+    startOfInput:"^",
+    endOfInput:"$",
+    excactly:"=",
+  }
+  list = document.getElementById('block_ul')
+  value = value.toLowerCase();
+  var child_nodes = list.getElementsByClassName('pal_content_image')
+  /*switch (testShortCut(value,shortcut)) {
+    case shortcut.startOfInput:
+      console.log("startOI");
+      break;
+    case shortcut.endOfInput:
+      console.log("endOI");
+      break;
+    case shortcut.excactly:
+      console.log("exactlyI");
+      break;
+    default:
+      break;
+  }*/
+  for (var i = 0; i < child_nodes.length; i++) {
+    var child_node = child_nodes[i]
+    if (GridObject.version == "1.12") {
+      var testValues = [child_node.dataset.base,child_node.dataset.display,child_node.dataset.id]
+    }
+    if (GridObject.version == "1.14") {
+      var testValues = [child_node.dataset.base,child_node.dataset.display]
+    }
+    child_node.style.display = "none"
+    for (var a = 0; a < testValues.length; a++) {
+      if (testValues[a].toLowerCase().indexOf(value) != -1) {
+        child_node.style.display = "inline-block"
+      }
+    }
+  }
+}
+function testShortCut(value,shortcutObj) {
+  for (var property in shortcutObj) {
+    if (shortcutObj.hasOwnProperty(property)) {
+      if (value.indexOf(shortcutObj[property]) != -1) {
+        return shortcutObj[property];
+      }
+    }
+  }
+}
