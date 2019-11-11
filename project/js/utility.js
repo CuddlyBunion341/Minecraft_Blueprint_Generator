@@ -26,7 +26,7 @@ function mtc(clf,sw,rw,mx,my,y) { //mtc => mouse to cord
   var x = Math.floor(mx * ratio / clf)
   var z = Math.floor(my * ratio / clf)
   //ctx.strokeRect(Math.floor(w * clf + lw / 2) + 0.5,Math.floor(h * clf + lw / 2) + 0.5,clf,clf)
-  console.log(x,y,z,clf,mx,my);
+  //console.log(x,y,z,clf,mx,my);
   return cellcord(x,y,z)
 }
 function getRandom(arr) {
