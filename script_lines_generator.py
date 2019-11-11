@@ -1,5 +1,5 @@
 import os
-string = ""
+string = '<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/minecraftia" type="text/css"/>'
 for root, dirs, files in os.walk('/Users/daniel/Desktop/Minecraft_Blueprint_Generator/project'):
     for file in files:
         if file.endswith('.js'):
@@ -14,3 +14,4 @@ for root, dirs, files in os.walk('/Users/daniel/Desktop/Minecraft_Blueprint_Gene
             string += cptpth + "\n"
 print("your code was copied to the clipboard :)")
 os.system("echo '%s' | pbcopy" % string)
+
