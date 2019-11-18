@@ -25,7 +25,7 @@ function fillUl() {
         selectElement(this,e.altKey,e.shiftKey)
       });
       added_e.addEventListener('mouseenter',function (e) {
-        //rename(this.dataset.display,this.dataset.id,this.dataset.base);
+        rename(this.dataset.display,this.dataset.id,this.dataset.base,e);
       })
       added_e.addEventListener('mouseleave',function (e) {
       })
@@ -98,8 +98,8 @@ function prepUl() {
     var tt = document.getElementById('tooltip')
     var bounding = tt.getBoundingClientRect();
     if (tt.style.opacity == 1) {
-      tt.style.left = e.clientX - bounding.width - 20 + "px"
-      tt.style.top = e.clientY - bounding.height / 2 + "px"
+      tt.style.left = e.pageX - bounding.width - 20 + "px"
+      tt.style.top = e.pageY - bounding.height / 2 + "px"
     }
   })
   document.getElementById('tooltip').addEventListener('transitionend', function(e) {
@@ -118,44 +118,29 @@ function prepUl() {
   })
 }
 function rename(display,id,base,e) {
+  var tt = document.getElementById('tooltip')
+  var d_el = document.getElementById("d_el")
+  var b_el = document.getElementById("b_el")
   if (GridObject.version == "1.12") {
-    var tt = document.getElementById('tooltip')
+    var idc;
     if (id.includes(':')) {
       idc = id.replace(':','/')
     }
     else {
       idc = id + '/' + 0
     }
-    /*var d_el = document.createElement("div")
     d_el.innerHTML = display + ' (' + textFusion('#0000',idc.split('/')[0]) + '/' + idc.split('/')[1] + ')'
-    d_el.style.textShadow = '2px 2px #413E40'
-    tt.appendChild(d_el)
-    var b_el = document.createElement("div")
     b_el.innerHTML = base
-    b_el.style.color = '#595659'
-    b_el.style.textShadow = '2px 2px #141314'
-    tt.appendChild(b_el)*/
-    var d_el = document.getElementById("d_el")
-    d_el.innerHTML = display + ' (' + textFusion('#0000',idc.split('/')[0]) + '/' + idc.split('/')[1] + ')'
-    var b_el = document.getElementById("b_el")
-    b_el.innerHTML = base
-    var bounding = tt.getBoundingClientRect();
-    tt.style.left = e.pageX - bounding.width - 20 + "px"
-    tt.style.top = e.pageY - bounding.height / 2 + "px"
-    return;
-    return;
   }
   if (GridObject.version == "1.14") {
-    var tt = document.getElementById('tooltip')
-    var d_el = document.getElementById("d_el")
     d_el.innerHTML = display
-    var b_el = document.getElementById("b_el")
     b_el.innerHTML = base
-    var bounding = tt.getBoundingClientRect();
-    tt.style.left = e.clientX - bounding.width - 20 + "px"
-    tt.style.top = e.clientY - bounding.height / 2 + "px"
-    return;
-  }}
+  }
+  var bounding = tt.getBoundingClientRect();
+  tt.style.left = e.pageX - bounding.width - 20 + "px"
+  tt.style.top = e.pageY - bounding.height / 2 + "px"
+  return;
+}
 function filter(value,list) {
   var shortcut = {
     startOfInput:"^",
@@ -202,4 +187,20 @@ function testShortCut(value,shortcutObj) {
       }
     }
   }
+}
+function textFusion(x,y,pos) {
+  //(#0001/0)
+  //x = #0000
+  //y = 1
+  //result = #0001
+  // #0000
+  //     1
+  var l1 = x.lenght
+  var l2 = y.length
+  var z;
+  for (var i = 0; i < l2; i++) {
+    x = x.slice(0, x.length-1);
+  }
+  x = x + y
+  return x;
 }
