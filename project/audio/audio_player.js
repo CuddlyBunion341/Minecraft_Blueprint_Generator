@@ -21,25 +21,28 @@ String.prototype.includesAnyOf = function (arr) {
   return false;
 };
 function getSound(block) {
+  if (block == "air") {
+    return 'air'
+  }
   if (GridObject.version == "1.12") {
     block = getFromArr(blocklist_1_12,block.replace(":","/"),"id","display").toLowerCase()
   }
   if (block.includesAnyOf(['wool','carpet']) || block.isOneOf(["cake","cactus"])) {
     return 'cloth';
   }
-  if (block.includesAnyOf(['grass','shroom','sapling','leav','flower','tnt'])) {
+  if (block.includesAnyOf(['grass','shroom','sapling','leav','flower','tnt',"sugar","reeds","plant"]) || block.includesAnyOf(["dandelion","poppy","blue_orchid","allium","azure_bluet","red_tulip","orange_tulip","white_tulip","pink_tulip","oxeye_daisy","cornflower","lily_of_the_valley","wither_rose","sunflower","lilac","rose_bush","peony"])) {
     return 'grass';
   }
   if (block.includesAnyOf(['dirt']) || block.isOneOf(["podzol","gravel","clay","mycelium"])) {
     return 'gravel';
   }
-  if (block.includesAnyOf(['sand','concrete_powder'])) {
+  if (block.includesAnyOf(['sand','concrete_powder']) && !block.includesAnyOf(["sand_stone","sandstone"])) {
     return 'sand';
   }
   if (block.includesAnyOf(['snow'])) {
     return 'snow';
   }
-  if (block.includesAnyOf(['plank','wood','log','acacia','oak','birch','spruce','jungle'])) {
+  if (block.includesAnyOf(['plank','wood','log','acacia','oak','birch','spruce','jungle',"book","chest","craft"])) {
     return 'wood';
   }
   if (block.includesAnyOf(["rail","hopper"]) || block.isOneOf(["gold_block","iron_block","diamond_block","emerald_block","iron_door","iron_trapdoor"])) {
