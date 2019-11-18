@@ -1,6 +1,8 @@
 function renderCell(cell_index) {
- //console.log("rendering [",cell_index,"]");
   //declare all Variables
+  if (!(cell_index in GridObject.Cells) && GridObject.selected.includes(cell_index == false)) {
+    return;
+  }
   var x = cell_index.split('x')[0].split('c')[1]
   var y = cell_index.split('x')[1]
   var z = cell_index.split('x')[2]
@@ -131,10 +133,12 @@ function renderGrid(width,height,dl) {
 function setWidth(w) {
   GridObject.x_size = w
   GridObject.z_size = w
+  //renderLayer(GridObject.current_y,true)
   AutoZoom()
 }
 function AutoZoom() {
   GridObject.zoom = ZoomCalc()
+  //ctx.clearRect(0,0,9999,9999)
   renderLayer(GridObject.current_y,true)
 }
 function ZoomCalc() {
