@@ -50,3 +50,12 @@ function deselect() {
   //////////////////////
   storeAction()
 }
+function deleteBlock(cell_index) {
+  delete GridObject.Cells[cell_index]
+}
+function deleteSelection() {
+  for (var i = 0; i < GridObject.selected.length; i++) {
+    delete GridObject.Cells[GridObject.selected[i]]
+    renderCell(GridObject.selected[i])
+  }
+}
