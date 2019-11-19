@@ -5,10 +5,12 @@ function newBrush() {
     var x = parseInt(cord.split("x")[0].split("c")[1])
     var z = parseInt(cord.split("x")[2])
     if (getBlock(cord) != block && isInBounds(x,z)) {
-      setBlock(cord,block)
-      renderCell(cord)
-      storeAction()
-      playBlockSound(getSound(block))
+      if (mxo(getBlock(cord) == undefined,block == 0) && mxo(getBlock(cord) == undefined,block == "air")) {
+        setBlock(cord,block)
+        renderCell(cord)
+        storeAction()
+        playBlockSound(getSound(block))
+      }
     }
   }
 }
