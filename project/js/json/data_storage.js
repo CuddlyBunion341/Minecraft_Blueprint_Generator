@@ -30,5 +30,9 @@ function getBlock(cord) {
   }
 }
 function setBlock(cord,block) {
+  /*if (block == "air" || block == 0) {
+    delete GridObject.Cells[cord]
+    return
+  }*/
   GridObject.Cells[cord] = {"block":block}
 }
