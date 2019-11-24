@@ -21,6 +21,7 @@ function getTextureCord(id) {
 }
 function mtc(clf,sw,rw,mx,my,y) { //mtc => mouse to cord
   ratio = sw / rw
+  
   //var x = Math.floor(mx * ratio / clf + ((GridObject.translate_x / clf) - (GridObject.translate_x / clf) * 2))
   //var z = Math.floor(my * ratio / clf + ((GridObject.translate_z / clf) - (GridObject.translate_z / clf) * 2))
   var x = Math.floor(mx * ratio / clf)
@@ -35,10 +36,13 @@ function getRandom(arr) {
 }
 function deleteAir() {
   for (var cord in GridObject.Cells) {
-    if (GridObject.Cells[cord].block == 0) {
+    if (GridObject.Cells[cord].block == 0 || GridObject.Cells[cord].block == "air") {
       GridObject.Cells[cord] = null
     }
   }
+}
+function deleteBlock(cell_index) {
+  GridObject.Cells[cell_index] = null
 }
 function min(x,y) {
   return Math.min(x,y)
@@ -48,4 +52,10 @@ function max(x,y) {
 }
 function isInBounds(x,z) {
   return x + 1 <= GridObject.x_size && z + 1 <= GridObject.z_size && x > -1 && z > -1
+}
+function xor(a,b) {
+  return (a || b) && !(a && b);
+}
+function mxo(a,b) {
+  return !a && !b || !a && b || a && !b
 }
