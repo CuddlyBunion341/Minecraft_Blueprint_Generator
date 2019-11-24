@@ -1,18 +1,27 @@
 function setup() {
-  var GridCanvas = document.getElementById('Gridvisulator')
-  var GraphicsCanvas = document.getElementById('Graphicsvisulator')
-  GridCanvas.height = 2048;//2100
-  GridCanvas.width = 2048;
-  GridCanvas.style.width = "512px";
-  GridCanvas.style.height = "512px";
-  GridCanvas.style.imageRendering = "pixelated";
-  GridCanvas.getContext('2d').imageSmoothingEnabled = false;
-  GraphicsCanvas.height = 2048;
-  GraphicsCanvas.width = 2048;
-  GraphicsCanvas.style.width = "512px";
-  GraphicsCanvas.style.height = "512px";
-  GraphicsCanvas.style.imageRendering = "pixelated";
-  GraphicsCanvas.getContext('2d').imageSmoothingEnabled = false;
+  defineGlobalVar()
+  ////////////////////////////////////////
+  window.canvas.height = 2048;//2100
+  window.canvas.width = 2048;
+  window.canvas.style.width = "512px";
+  window.canvas.style.height = "512px";
+  window.canvas.style.imageRendering = "pixelated";
+  window.ctx.imageSmoothingEnabled = false;
+  ////////////////////////////////////////
+  window.canvasG.height = 2048;
+  window.canvasG.width = 2048;
+  window.canvasG.style.width = "512px";
+  window.canvasG.style.height = "512px";
+  window.canvasG.style.imageRendering = "pixelated";
+  window.ctxG.imageSmoothingEnabled = false;
+  ///////////////////////////////////////
+  window.ctx.translate(0.5,0.5)
+  window.ctxG.translate(0.5,0.5)
+  //////////////////////////////////////
+  window.sw = window.canvas.width
+  window.rw = parseInt(window.canvas.style.width.split("px")[0])
+  window.ratio = window.sw / window.rw
+  //////////////////////////////////////
   var imagesToLoad = ['image-files/1.12/top.png','image-files/1.14/1.14.png']
   var div = document.createElement('div')
   div.id = 'imageHolder'
@@ -51,31 +60,6 @@ function setup() {
   setTimeout(function () {
     document.getElementById('imageHolder').parentNode.removeChild(document.getElementById('imageHolder'))
   }, 10)
-  /*var previewDraw = setInterval(function() {renderLayer(GridObject.current_y,true);}, 1);
-    var stopPreviewDraw = function() { clearInterval(previewDraw) }
-    setTimeout(stopPreviewDraw, 500)*/
-}
-function add_Rdom() {
-  var x_size = GridObject.x_size
-  var z_size = GridObject.z_size
-  var rdmX = Math.floor(Math.random() * x_size)
-  var rdmZ = Math.floor(Math.random() * z_size)
-  var list = []
-  for (var i = 1; i < 7; i++) {
-    list.push(i.toString())
-  }
-  for (var i = 11; i < 25; i++) {
-    list.push(i.toString())
-  }
-  //var list = ['1','2','3','4','5','7','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25']
-  var rdmB = Math.floor(Math.random() * list.length)
-  var crd = cellCord(rdmX,0,rdmZ)
-  if (GridObject.Cells.hasOwnProperty[crd] == undefined) {
-    GridObject.Cells[crd] = {
-      block:rdmB.toString()
-  }
-  renderCell(crd)
-  }
 }
 function ChangeVersion(version) {
   switch (version) {
@@ -86,56 +70,18 @@ function ChangeVersion(version) {
      //console.log('IT IS 1.14!!!');
       break;
     default:
-     //console.log('Version [' + version + '] caused an Error')
+     console.log('Version [' + version + '] caused an Error')
   }
-}
-function initCanvasVar() {
-  window.canvas = document.getElementById('Gridvisulator')
-  window.ctx = window.canvas.getContext('2d')
-  window.ctx.translate(0.5, 0.5);
-  window.canvasG = document.getElementById('Graphicsvisulator')
-  window.ctxG = window.canvasG.getContext('2d')
-  window.texture = document.createElement("img") //new Image()
-  window.texture.src = 'image-files/1.12/top.png'
-  window.texture.style.imageRendering = 'pixelated'
-  window.texture1_14 = document.createElement("img") //new Image()
-  window.texture1_14.src = 'image-files/1.14/1.14.png'
-  window.texture1_14.style.imageRendering = 'pixelated'
-  window.texture1_14.onload = function () {
-    //renderLayer(GridObject.current_y,true)
-    setWidth(8)
-    //renderGrid(8,8,GridObject.current_y,true)
-    //ctx.lineWidth = 6
-    //ctx.strokeRect(3.5,3.5,196,196)
-  };
 }
 function prepareSelect() {
   document.getElementById('brush_select').onchange = function() {toolObj.tool = this.value;}
 }
-function updateGlobalVar() {
-  window.sw = canvas.width
-  window.rw = parseInt(canvas.style.width.split("px")[0])
-  window.size = GridObject.zoom * GridObject.defaultsize
-  window.lw = GridObject.lineWidth
-  window.clf = size - lw * 2
-  Object.getPrototypeOf(ctx).nsr=function(x,y,w,h) {
-    this.lineWidth = Math.round(this.lineWidth)
-    if (this.lineWidth/2 == Math.floor(this.lineWidth/2)) {
-      this.strokeRect(Math.round(x),Math.round(y),Math.round(w),Math.round(h))
-      console.log(Math.round(x),Math.round(y),Math.round(w),Math.round(h));
-    }
-    else {
-      this.strokeRect(Math.round(x) + 0.5,Math.round(y) + 0.5,Math.round(w) + 0.5,Math.round(h) + 0.5)
-      console.log(Math.round(x) + 0.5,Math.round(y) + 0.5,Math.round(w) + 0.5,Math.round(h) + 0.5);
-    }
-  }
-}
 window.onload = function(){
   setup();
-  initCanvasVar()
+  /*initCanvasVar()*/
   initToolEvents()
   prepareSelect()
-  updateGlobalVar()
+  /*updateGlobalVar()*/
   prepUl()
   fillUl()
 }

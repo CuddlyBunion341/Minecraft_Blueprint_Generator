@@ -1,7 +1,7 @@
 function renderRect(startpos,endpos,add,subtract) {
   if (toolObj.tool == 'rect_select' && toolObj.drag == 1) {
-    var newStartPos = {x:startpos.x * ratio,y:startpos.y * ratio}
-    var newEndPos = {x:endpos.x * ratio,y:endpos.y * ratio}
+    var newStartPos = {x:startpos.x * window.ratio,y:startpos.y * window.ratio}
+    var newEndPos = {x:endpos.x * window.ratio,y:endpos.y * window.ratio}
     var width = Math.max(newStartPos.x, newEndPos.x) - Math.min(newStartPos.x , newEndPos.x)
     var height = Math.max(newStartPos.y, newEndPos.y) - Math.min(newStartPos.y , newEndPos.y)
     ctxG.clearRect(0,0,canvasG.width,canvasG.height)
@@ -52,10 +52,12 @@ function deselect() {
 }
 function deleteBlock(cell_index) {
   delete GridObject.Cells[cell_index]
+  storeAction()
 }
 function deleteSelection() {
   for (var i = 0; i < GridObject.selected.length; i++) {
     delete GridObject.Cells[GridObject.selected[i]]
     renderCell(GridObject.selected[i])
   }
+  storeAction()
 }
