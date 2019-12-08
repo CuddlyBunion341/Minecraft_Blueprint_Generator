@@ -4,12 +4,12 @@ var GridObject = {
   x_size: 8,
   current_y: 0,
   z_size: 8,
-  zoom: 2.6,
+  zoom: 1,
   translate_x:0,
   translate_z:0,
-  defaultsize: 80, //80
+  defaultsize: 256, //80
   spacefactor: -1, //4
-  lineWidth: 3.25,
+  lineWidth: 6.25,
   lineWidth_selected:2,
   tool: "",
   Cells: {
