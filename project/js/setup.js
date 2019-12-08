@@ -1,3 +1,4 @@
+var setupArr = []
 function setup() {
   defineGlobalVar()
   ////////////////////////////////////////
@@ -76,12 +77,27 @@ function ChangeVersion(version) {
 function prepareSelect() {
   document.getElementById('brush_select').onchange = function() {toolObj.tool = this.value;}
 }
+setupArr.push("prepareSelect()")
+/*function setupPush(string) {
+  if (!setupArr) {
+    setupPush(string)
+    return
+  }
+  setupArr.push(string)
+}*/
+function runSetupArray() {
+  for (var i = 0; i < setupArr.length; i++) {
+    console.log("running [" + setupArr[i] + "]" + " Index: " + i);
+    eval(setupArr[i])
+  }
+}
 window.onload = function(){
   setup();
+  runSetupArray()
   /*initCanvasVar()*/
-  initToolEvents()
-  prepareSelect()
+  /*initToolEvents()*/
+  /*prepareSelect()*/
   /*updateGlobalVar()*/
-  prepUl()
-  fillUl()
+  /*prepUl()*/
+  /*fillUl()*/
 }

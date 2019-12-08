@@ -1,6 +1,7 @@
-function floodfill() {
+function floodfill(mousePos) {
   if (toolObj.tool == 'floodfill') {
     //var block = document.getElementById('material_select').value
+    var cord = mtc(window.clf,window.sw,window.rw,mousePos.x,mousePos.y,GridObject.current_y)
 		var block = getMaterial()
     var paper = getBlock(cord)
     floodfillF(cord,paper,block)

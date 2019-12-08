@@ -43,7 +43,7 @@ function renderCell(cell_index) {
       //ctx.fillRect(x * clf + lw,z * clf + lw,clf - 2 * lw,clf - 2 * lw)
       ctx.drawImage(texture,16 * idm,16 * id,16,16,Math.floor(x * clf + lw),Math.floor(z * clf + lw) + 0.5,clf - lw + 0.5,clf - lw)
       //ctx.drawImage(texture,16 * idm,16 * id,16,16,x * clf,z * clf,clf,clf)
-      //ctx.drawImage(texture,16 * idm, 16 * id,16,16,clf * x + GridObject.translate_x + size / (100 / lw),clf * z + GridObject.translate_z + size / (100 / lw),size - (size / (100 / lw)) * 2,size - (size / (100 / lw)) * 2)
+      //ctx.drawImage(texture,16 * idm, 16 * id,16,16,clf * x + size / (100 / lw),clf * z + size / (100 / lw),size - (size / (100 / lw)) * 2,size - (size / (100 / lw)) * 2)
       // works but not aligning with renderGrid's 'Grid'
     }
     else if (GridObject.version == '1.14') {
@@ -105,7 +105,8 @@ function renderGrid(width,height,dl) {
   }
   var c = document.getElementById('Gridvisulator')
   var ctx = c.getContext('2d')
-  ctx.strokeStyle = "#000000"
+  //ctx.strokeStyle = "#000000"
+  ctx.strokeStyle = "#333"
   if (dl) {
     ctx.clearRect(0,0,c.width,c.height) //debug
   }

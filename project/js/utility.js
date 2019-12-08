@@ -21,7 +21,7 @@ function getTextureCord(id) {
 }
 function mtc(clf,sw,rw,mx,my,y) { //mtc => mouse to cord
   ratio = sw / rw
-  
+
   //var x = Math.floor(mx * ratio / clf + ((GridObject.translate_x / clf) - (GridObject.translate_x / clf) * 2))
   //var z = Math.floor(my * ratio / clf + ((GridObject.translate_z / clf) - (GridObject.translate_z / clf) * 2))
   var x = Math.floor(mx * ratio / clf)

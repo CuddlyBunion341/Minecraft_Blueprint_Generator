@@ -204,3 +204,5 @@ function textFusion(x,y,pos) {
   x = x + y
   return x;
 }
+setupArr.push("prepUl()")
+setupArr.push("fillUl()")

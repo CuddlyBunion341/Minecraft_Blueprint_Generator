@@ -93,3 +93,4 @@ function Redraw(liwi,d1) {
   ctxG.rect(300,400,600,600);
   ctxG.stroke();
 }
+setupArr.push("initToolEvents()")
